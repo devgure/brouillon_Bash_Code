@@ -14,9 +14,42 @@
 
 
 ////Wesnday:://///////////////////////////////////////////////////////////////////////////////////////
-////Wesnday:://///////////////////////////////////////////////////////////////////////////////////////
 
-////Wesnday:://///////////////////////////////////////////////////////////////////////////////////////
+////Wesnday afternoon    August 20 :://///////////////////////////////////////////////////////////////////////////////////////
+
+Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+Backend,Node.js + Express.js / NestJS (modular), I18n
+Authentication JWT + OAuth 2.0  Firebase Auth (Google, Apple, Facebook social )
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+Realtime Socket.IO for chat & notifications
+Authentication,  User signup/login (social + email) Auth  + OAuth 
+Monetization Stripe webhook subscription checkout,Subscriptions.$9.99– Premium Subscription
+Freemium Model: Free: Basic swiping, limited likes/day
+$19.99/month (Gold/Platinum tier) in In-App Purchases,Ads:
+Non-intrusive banner ads (for free users)
+Ai matching Model, Facial Recognition & AI Features (python +FastApi) 
+Realtime chat with Socket.IO,Real-Time Chat & Notifications Match 
+OpenAPI (Swagger) 
+fully Admin fonctinnal, + AdminLTE / Material UI CRUD ( user , report, moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
+
+
+
+////Wesnday::///////////////////////////////////// c est la Suite de First Code Line ..With MongoDbk Prisma  ORm
+
+Generate a full GitHub repo structure template  source code and Web, mobile-app  server servicecs Src, (React Native) Components,services,hooks,Screens Navigation,Routes, json, services, all Dockerfiles, pages, ready for production to copy Expo mobile navigation, Admin CRUD (React Admin) ,AI model training script, OPenAPi (Swagger) API docs,Expo mobile swipe UI,Add Oauth google/apple Setup Guide, Prisma seed script Stripe checkout integration code profitable webhook ,Realtime chat with Socket.IO, backend dockerfile OpenAPI (Swagger) spec Stripe webhook test suite, AI model training notebook,Expo mobile camera + facial upload,Admin dashboard, Add Firebase Auth integration code, deloyment guide, test jest =cypress test
+
+
+
+
+
+////////////////////////////////////////////////////
+
+
+
+
 #  second commande with Mongodn Rpisaml n
 Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
 Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
