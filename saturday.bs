@@ -1,0 +1,25 @@
+bash
+Copy
+#!/usr/bin/env bash
+# create-empty-tree.sh
+# Creates the full directory / empty-file skeleton for the Spark Dating App.
+
+set -euo pipefail
+
+ROOT="spark-dating-app"
+
+echo "🛠️  Creating empty directory & file skeleton for $ROOT …"
+
+# ------------------------------------------------------------------------------
+# Directories & empty files generator
+# ------------------------------------------------------------------------------
+mkdir -p "$ROOT"/frontend/{web-desktop/{src/{pages/{Login.jsx,Home.jsx,Chat.jsx,Profile.jsx},components/{SwipeCard.jsx,MatchModal.jsx},App.jsx},package.json,vite.config.js,Dockerfile},mobile-web,mobile-app/{src/{screens/{LoginScreen.jsx,HomeScreen.jsx,ChatScreen.jsx,ProfileScreen.jsx},components/{SwipeGesture.jsx,ChatBubble.jsx},App.jsx},app.json,babel.config.js,package.json,Dockerfile}}
+mkdir -p "$ROOT"/backend/{gateway/{index.js,package.json,Dockerfile},services/{auth-service/{index.js,Dockerfile},profile-service/{index.js,Dockerfile},match-service/{index.js,Dockerfile},chat-service/{index.js,Dockerfile},discovery-service/{index.js,Dockerfile},media-service/{index.js,Dockerfile},notification-service/{index.js,Dockerfile},analytics-service/{index.js,Dockerfile},ai-engine/{app.py,models/{compatibility_model.pkl,train_model.py},requirements.txt,Dockerfile}}}
+mkdir -p "$ROOT"/infrastructure/{docker/{docker-compose.yml},k8s/{gateway-deployment.yaml,auth-deployment.yaml,postgres-statefulset.yaml,redis-deployment.yaml,minio-deployment.yaml,ingress.yaml},terraform/{main.tf,variables.tf,outputs.tf,aws/{eks-cluster.tf}},nginx/{nginx.conf,ubuntu-setup.sh}}
+mkdir -p "$ROOT"/firebase/{cloud-functions/onMatchCreate.js,firebase-config.js}
+mkdir -p "$ROOT"/payments/stripe-webhook.js
+
+# Root-level empty files
+touch "$ROOT"/{README.md,LICENSE,.env.example}
+
+echo "✅  Empty skeleton created at ./$ROOT"
