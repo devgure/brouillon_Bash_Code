@@ -32,7 +32,8 @@ Real-time Chat (WebSocket)
 AI Compatibility Engine
 Video Calling (WebRTC)
 OpenAPI (Swagger) 
-fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report, moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
+fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report, moderation,Monetization tracking 
+(subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
 Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
 
 
@@ -207,12 +208,15 @@ Video Calling (WebRTC)
 
 
 OpenAPI (Swagger) 
-fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report, moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
+fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report,
+moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
 Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
 
 
 /////////////////
-Socket.IO enables real-time in-app notifications by providing a WebSocket-based connection for instant, bidirectional communication between a server and client. To implement a Socket.IO push notification system, you set up a Node.js server using the Socket.IO library to handle messages, create a Socket.IO client on your frontend with a library like Socket.IO-client to connect to the server, and then use Socket.IO to emit and receive events for
+Socket.IO enables real-time in-app notifications by providing a WebSocket-based connection for instant, bidirectional communication between a server and client.
+To implement a Socket.IO push notification system, you set up a Node.js server using the Socket.IO library to handle messages,
+create a Socket.IO client on your frontend with a library like Socket.IO-client to connect to the server, and then use Socket.IO to emit and receive events for
 
 
 
@@ -247,7 +251,8 @@ Facial Recognition
 AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
 Realtime chat with Socket.IO,Real-Time Chat & Notifications Match 
 OpenAPI (Swagger) 
-fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report, moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks) all source code boilerplate
+fully Admin Dashboard (Internal Tool) Built with React + Retool CRUD ( user , report, moderation,Monetization tracking (subscriptions, ad revenue (Stripe webhooks)
+all source code boilerplate
 Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
 
 ////////////
