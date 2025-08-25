@@ -1,21 +1,17 @@
-#!/usr/bin/env bash
-###############################################################################
-# scaffold-match.sh – scaffold the entire empty folder / file tree for match/
-###############################################################################
 
 set -euo pipefail
 
 ROOT="match"
 
 ###############################################################################
-# 1. Create all directories
+# 1. Create directories
 ###############################################################################
 mkdir -p "$ROOT"/{\
 clients/{\
 mobile/{src/{screens,components,navigation,services,i18n,utils}},\
 web-mobile/{public,src/{pages,components,hooks,services,i18n}},\
 web-desktop/src/{layouts,pages},\
-shared/{types,constants,utils,i18n}\
+shared/{types,constants,utils/helpers.ts,i18n}\
 },\
 gateway/{src/{routes,middleware,services}},\
 services/{\
@@ -58,17 +54,14 @@ docs\
 ###############################################################################
 # 2. Create empty files
 ###############################################################################
-# clients
 touch "$ROOT"/clients/{mobile/{App.tsx,app.config.js,package.json},web-mobile/{vite.config.ts,index.html},web-desktop/package.json}
 touch "$ROOT"/clients/shared/utils/helpers.ts
 
-# gateway
 touch "$ROOT"/gateway/{Dockerfile,package.json,server.ts}
 touch "$ROOT"/gateway/src/routes/{auth.route.ts,user.route.ts,match.route.ts}
 touch "$ROOT"/gateway/src/middleware/{auth.middleware.ts,rateLimit.middleware.ts,logging.middleware.ts}
 touch "$ROOT"/gateway/src/services/{authServiceClient.ts,matchServiceClient.ts}
 
-# services
 for svc in auth profile match chat discovery notification media analytics; do
   touch "$ROOT/services/${svc}-service"/{package.json,Dockerfile,server.ts}
 done
@@ -82,8 +75,8 @@ touch "$ROOT/services/media-service"/src/upload/s3Uploader.ts
 touch "$ROOT/services/media-service"/src/moderation/awsRekognition.ts
 touch "$ROOT/services/analytics-service"/src/collectors/eventTracker.ts
 
-# ai-engine
 for ai in recommendation nlp-analyzer image-moderation behavioral-predictor; do
+  mkdir -p "$ROOT/ai-engine/$ai"
   touch "$ROOT/ai-engine/$ai"/{Dockerfile,requirements.txt}
 done
 touch "$ROOT/ai-engine/recommendation"/src/{models/{collaborative_filtering.py,content_based.py},api/server.py}
@@ -91,26 +84,20 @@ touch "$ROOT/ai-engine/nlp-analyzer"/src/{tone_detector.py,safety_filter.py,app.
 touch "$ROOT/ai-engine/image-moderation"/src/{nsfw_detector.py,face_validator.py,api.py}
 touch "$ROOT/ai-engine/behavioral-predictor"/src/{churn_model.py,swipe_predictor.py}
 
-# data
 touch "$ROOT"/data/mongodb/{schemas/{User.schema.json,Match.schema.json},init.js}
 touch "$ROOT"/data/redis/config.js
 touch "$ROOT"/data/elasticsearch/mappings/user-profile.json
 touch "$ROOT"/data/minio/setup-buckets.sh
 
-# infra
 touch "$ROOT"/infra/{docker-compose.yml,k8s/deployments/{auth-deployment.yaml,gateway-deployment.yaml},k8s/namespace.yaml}
 touch "$ROOT"/infra/terraform/{main.tf,variables.tf}
 
-# monitoring
 touch "$ROOT"/monitoring/{prometheus/prometheus.yml,logging/fluentd-config.conf,sentry/sentry.properties}
 touch "$ROOT"/monitoring/grafana/dashboards/.gitkeep
 
-# scripts, docs, CI
 touch "$ROOT"/scripts/{deploy-all.sh,seed-dev-data.js}
 touch "$ROOT"/.github/workflows/ci-cd.yml
 touch "$ROOT"/docs/{API.md,ARCHITECTURE.md}
-
-# root
 touch "$ROOT"/{package.json,pnpm-workspace.yaml,README.md}
 
-echo "✅  Empty match/ skeleton created under ./$ROOT/"
+echo "✅  Matchly scaffold created under ./$ROOT/"
