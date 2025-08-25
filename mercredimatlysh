@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+###############################################################################
+# scaffold-matchly.sh – create the complete empty folder / file skeleton
+# for the Matchly mono-repo.
+###############################################################################
+
+set -euo pipefail
+
+# Create every directory
+mkdir -p matchly/{clients/{mobile/{src/{screens,components,navigation,services,i18n,utils}},web-mobile/{public,src/{pages,components,hooks,services,i18n}},web-desktop/src/{layouts,pages},shared/{types,constants,utils,i18n}},gateway/src/{routes,middleware,services},services/{auth-service,profile-service,match-service,chat-service,discovery-service,notification-service,media-service,analytics-service}/src/{controllers,routes,services,models,dto,validators,algorithms,websocket,repositories,geolocation,providers,upload,moderation,collectors},ai-engine/{recommendation,nlp-analyzer,image-moderation,behavioral-predictor}/src/{models,api,data},data/{mongodb/{schemas},redis,elasticsearch/mappings,minio},infra/{k8s/{deployments,services,ingress},terraform/modules/{eks-cluster,s3-bucket}},monitoring/{grafana/dashboards,prometheus,logging,sentry},scripts,docs,.github/workflows}
+
+# Create every file (empty unless otherwise noted)
+
+# clients
+touch matchly/clients/mobile/{App.tsx,app.config.js,package.json}
+touch matchly/clients/web-mobile/{vite.config.ts,index.html}
+touch matchly/clients/web-desktop/package.json
+touch matchly/clients/shared/{types/.gitkeep,constants/.gitkeep,utils/helpers.ts,i18n/.gitkeep}
+
+# gateway
+touch matchly/gateway/src/{routes/{auth.route.ts,user.route.ts,match.route.ts},middleware/{auth.middleware.ts,rateLimit.middleware.ts,logging.middleware.ts},services/{authServiceClient.ts,matchServiceClient.ts},server.ts}
+touch matchly/gateway/{Dockerfile,package.json}
+
+# services
+for svc in auth-service profile-service match-service chat-service discovery-service notification-service media-service analytics-service; do
+  touch matchly/services/$svc/{package.json,Dockerfile,server.ts}
+done
+touch matchly/services/auth-service/src/models/User.ts
+touch matchly/services/match-service/src/algorithms/matcher.ts
+touch matchly/services/match-service/src/controllers/match.controller.ts
+touch matchly/services/chat-service/src/websocket/socketServer.ts
+touch matchly/services/chat-service/src/repositories/.gitkeep
+touch matchly/services/discovery-service/src/geolocation/geoEngine.ts
+touch matchly/services/notification-service/src/providers/{fcm.ts,ses.ts}
+touch matchly/services/media-service/src/upload/s3Uploader.ts
+touch matchly/services/media-service/src/moderation/awsRekognition.ts
+touch matchly/services/analytics-service/src/collectors/eventTracker.ts
+
+# ai-engine
+for ai in recommendation nlp-analyzer image-moderation behavioral-predictor; do
+  touch matchly/ai-engine/$ai/{Dockerfile,requirements.txt}
+done
+touch matchly/ai-engine/recommendation/src/{models/{collaborative_filtering.py,content_based.py},api/server.py,data/.gitkeep}
+touch matchly/ai-engine/nlp-analyzer/src/{tone_detector.py,safety_filter.py,app.py}
+touch matchly/ai-engine/image-moderation/src/{nsfw_detector.py,face_validator.py,api.py}
+touch matchly/ai-engine/behavioral-predictor/src/{churn_model.py,swipe_predictor.py}
+
+# data
+touch matchly/data/mongodb/{schemas/{User.schema.json,Match.schema.json},init.js}
+touch matchly/data/redis/config.js
+touch matchly/data/elasticsearch/mappings/user-profile.json
+touch matchly/data/minio/setup-buckets.sh
+
+# infra
+touch matchly/infra/k8s/deployments/{auth-deployment.yaml,gateway-deployment.yaml}
+touch matchly/infra/k8s/services/.gitkeep
+touch matchly/infra/k8s/ingress/.gitkeep
+touch matchly/infra/k8s/namespace.yaml
+touch matchly/infra/terraform/{main.tf,variables.tf}
+touch matchly/infra/docker-compose.yml
+
+# monitoring
+touch matchly/monitoring/{grafana/dashboards/.gitkeep,prometheus/prometheus.yml,logging/fluentd-config.conf,sentry/sentry.properties}
+
+# scripts, docs, CI
+touch matchly/scripts/{deploy-all.sh,seed-dev-data.js}
+touch matchly/docs/{API.md,ARCHITECTURE.md}
+touch matchly/.github/workflows/ci-cd.yml
+
+# root
+touch matchly/{package.json,pnpm-workspace.yaml,README.md}
+
+echo "✅  Matchly skeleton created under ./matchly/"
