@@ -1,103 +1,71 @@
+#!/usr/bin/env bash
+###############################################################################
+# scaffold-sparta.sh – scaffold the entire empty folder / file tree for sparta/
+###############################################################################
 
 set -euo pipefail
 
-ROOT="match"
+ROOT="sparta"
 
 ###############################################################################
 # 1. Create directories
 ###############################################################################
 mkdir -p "$ROOT"/{\
-clients/{\
-mobile/{src/{screens,components,navigation,services,i18n,utils}},\
-web-mobile/{public,src/{pages,components,hooks,services,i18n}},\
-web-desktop/src/{layouts,pages},\
-shared/{types,constants,utils/helpers.ts,i18n}\
+apps/{\
+web/{public,src/{components,pages,hooks,services,store,routes,assets}},\
+mobile/{components,hooks,navigation,screens,services,utils,assets},\
+admin/src/pages,\
+desktop\
 },\
-gateway/{src/{routes,middleware,services}},\
-services/{\
-auth-service/{src/{controllers,routes,services,models}},\
-profile-service/{src/{dto,validators}},\
-match-service/{src/{algorithms,controllers}},\
-chat-service/{src/{websocket,repositories}},\
-discovery-service/{src/{geolocation}},\
-notification-service/{src/{providers}},\
-media-service/{src/{upload,moderation}},\
-analytics-service/{src/{collectors}}\
+packages/{\
+api-gateway/src/{middleware},\
+microservices/{auth-service,user-service,match-service,chat-service,payment-service,location-service,ai-service,recommendation-service,content-service,i18n-service,analytics-service,reputation-service},\
+shared/{dto,interfaces,utils},\
+config/{env}\
 },\
-ai-engine/{\
-recommendation/{src/{models,api,data}},\
-nlp-analyzer/{src},\
-image-moderation/{src},\
-behavioral-predictor/{src}\
-},\
-data/{\
-mongodb/{schemas},\
-redis,\
-elasticsearch/mappings,\
-minio\
-},\
-infra/{\
-k8s/{deployments,services,ingress},\
-terraform/{modules/{eks-cluster,s3-bucket}}\
-},\
-monitoring/{\
-grafana/dashboards,\
-prometheus,\
-logging,\
-sentry\
-},\
-scripts,\
-.github/workflows,\
-docs\
+infra/{k8s/{deployments,services},scripts,caddy},\
+notebooks,\
+docs,\
+tests/{unit,integration,e2e},\
+.github/workflows\
 }
 
 ###############################################################################
 # 2. Create empty files
 ###############################################################################
-touch "$ROOT"/clients/{mobile/{App.tsx,app.config.js,package.json},web-mobile/{vite.config.ts,index.html},web-desktop/package.json}
-touch "$ROOT"/clients/shared/utils/helpers.ts
+# apps
+touch "$ROOT"/apps/{web/src/App.tsx,mobile/{screens/{MatchScreen.tsx,ChatScreen.tsx,VideoCallScreen.tsx,ProfileScreen.tsx},app.json,App.tsx},admin/src/pages/{Users.tsx,Revenue.tsx,Moderation.tsx},desktop/main.js}
 
-touch "$ROOT"/gateway/{Dockerfile,package.json,server.ts}
-touch "$ROOT"/gateway/src/routes/{auth.route.ts,user.route.ts,match.route.ts}
-touch "$ROOT"/gateway/src/middleware/{auth.middleware.ts,rateLimit.middleware.ts,logging.middleware.ts}
-touch "$ROOT"/gateway/src/services/{authServiceClient.ts,matchServiceClient.ts}
-
-for svc in auth profile match chat discovery notification media analytics; do
-  touch "$ROOT/services/${svc}-service"/{package.json,Dockerfile,server.ts}
+# packages
+touch "$ROOT"/packages/api-gateway/{Dockerfile,src/server.ts}
+touch "$ROOT"/packages/config/{env/{.env.development,.env.production,.env.example},nginx.conf}
+# microservice dockerfiles
+for svc in auth user match chat payment location ai recommendation content i18n analytics reputation; do
+  touch "$ROOT/packages/microservices/${svc}-service"/Dockerfile
 done
-touch "$ROOT/services/auth-service"/src/models/User.ts
-touch "$ROOT/services/match-service"/src/algorithms/matcher.ts
-touch "$ROOT/services/match-service"/src/controllers/match.controller.ts
-touch "$ROOT/services/chat-service"/src/websocket/socketServer.ts
-touch "$ROOT/services/discovery-service"/src/geolocation/geoEngine.ts
-touch "$ROOT/services/notification-service"/src/providers/{fcm.ts,ses.ts}
-touch "$ROOT/services/media-service"/src/upload/s3Uploader.ts
-touch "$ROOT/services/media-service"/src/moderation/awsRekognition.ts
-touch "$ROOT/services/analytics-service"/src/collectors/eventTracker.ts
 
-for ai in recommendation nlp-analyzer image-moderation behavioral-predictor; do
-  mkdir -p "$ROOT/ai-engine/$ai"
-  touch "$ROOT/ai-engine/$ai"/{Dockerfile,requirements.txt}
+# infra
+touch "$ROOT"/infra/{docker-compose.yml,k8s/ingress.yaml}
+touch "$ROOT"/infra/scripts/{setup-ubuntu.sh,seed-db.js,ssl-setup.sh}
+
+# notebooks
+touch "$ROOT"/notebooks/{train_face_recognition.ipynb,ai_match_model.ipynb}
+
+# docs
+touch "$ROOT"/docs/{openapi.yaml,ARCHITECTURE.md,DEPLOYMENT.md}
+
+# tests
+touch "$ROOT"/tests/unit/{auth.service.test.ts}
+touch "$ROOT"/tests/integration/{chat.spec.js,payment.webhook.test.ts}
+touch "$ROOT"/tests/e2e/login-flow.spec.js
+
+# CI
+touch "$ROOT"/.github/workflows/{ci.yml,cd.yml}
+
+# root
+touch "$ROOT"/{package.json,tsconfig.json,README.md,docker-compose.yml}
+for svc in auth user match chat payment location ai recommendation content i18n analytics reputation; do
+  touch "$ROOT/Dockerfile.${svc}"
 done
-touch "$ROOT/ai-engine/recommendation"/src/{models/{collaborative_filtering.py,content_based.py},api/server.py}
-touch "$ROOT/ai-engine/nlp-analyzer"/src/{tone_detector.py,safety_filter.py,app.py}
-touch "$ROOT/ai-engine/image-moderation"/src/{nsfw_detector.py,face_validator.py,api.py}
-touch "$ROOT/ai-engine/behavioral-predictor"/src/{churn_model.py,swipe_predictor.py}
 
-touch "$ROOT"/data/mongodb/{schemas/{User.schema.json,Match.schema.json},init.js}
-touch "$ROOT"/data/redis/config.js
-touch "$ROOT"/data/elasticsearch/mappings/user-profile.json
-touch "$ROOT"/data/minio/setup-buckets.sh
-
-touch "$ROOT"/infra/{docker-compose.yml,k8s/deployments/{auth-deployment.yaml,gateway-deployment.yaml},k8s/namespace.yaml}
-touch "$ROOT"/infra/terraform/{main.tf,variables.tf}
-
-touch "$ROOT"/monitoring/{prometheus/prometheus.yml,logging/fluentd-config.conf,sentry/sentry.properties}
-touch "$ROOT"/monitoring/grafana/dashboards/.gitkeep
-
-touch "$ROOT"/scripts/{deploy-all.sh,seed-dev-data.js}
-touch "$ROOT"/.github/workflows/ci-cd.yml
-touch "$ROOT"/docs/{API.md,ARCHITECTURE.md}
-touch "$ROOT"/{package.json,pnpm-workspace.yaml,README.md}
-
-echo "✅  Matchly scaffold created under ./$ROOT/"
+echo "✅  Empty sparta/ skeleton created under ./$ROOT/"
