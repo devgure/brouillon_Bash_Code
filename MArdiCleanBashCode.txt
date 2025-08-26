@@ -141,11 +141,11 @@ STRIPE_WEBHOOK_URL
 /////////////////////////////
 
 Source,   Projected Revenue (Year 1)
-Subscriptions (5% conversion) ,$300K+
-In-App Purchases,   $100K+
-"Ads (CPM $5, 1M impressions/month)"    ,$60K/year
-Virtual Gifts (social monetization)    ,$50K+
-Total Potential,    ~$500K+/year
+Subscriptions  (5% conversion) ,$300K+
+In-App Purchases,    $100K+
+"Ads (CPM $5, 1M   impressions/month)"    ,$60K/year
+Virtual Gifts (social monetization)      ,$50K+
+Total Potential,          ~$500K+/year
 
 
 
