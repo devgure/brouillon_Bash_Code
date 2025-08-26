@@ -138,7 +138,15 @@ STRIPE_PREMIUM_PRICE_ID=
 STRIPE_GOLD_PRICE_ID=
 STRIPE_WEBHOOK_URL
 
-/////////////////////////////
+/////////////////////////////  Monetizati  training with Customer////
+
+Feature,Type,Notes
+**Premium Subscription (Sparkly+) **(Monthly/Yearly), Recurring,"Ad-free, unlimited likes, Super Likes, boost, incognito mode"
+In-App Purchases,      One-time,"Buy extra Super Likes, Top Picks, profile boosts"
+Ads,     Non-intrusive,Banner ads for free users (interstitial on swipe limit)
+Virtual Gifts,   Social Monetization,"Send gifts during chat (e.g., roses, fireworks)"
+Boost Visibility,  Time-limited,Push profile to top of nearby users for 30 mins
+
 
 Source,   Projected Revenue (Year 1)
 Subscriptions  (5% conversion) ,$300K+
@@ -146,6 +154,7 @@ In-App Purchases,    $100K+
 "Ads (CPM $5, 1M   impressions/month)"    ,$60K/year
 Virtual Gifts (social monetization)      ,$50K+
 Total Potential,          ~$500K+/year
+
 
 
 
