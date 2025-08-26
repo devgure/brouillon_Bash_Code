@@ -1,4 +1,4 @@
-!/bin/bash
+###!/bin/bash
 
 # Project Skeleton Generator for "matchly"
 # Creates full directory structure and placeholder files
