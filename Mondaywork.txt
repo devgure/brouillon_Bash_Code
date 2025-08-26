@@ -751,4 +751,173 @@ sparkr-app/
 
 
 
-////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  etincel.sh
+#!/usr/bin/env bash
+# scaffold-etincel.sh – recreate the *exact* folder & file structure for Etincel
+set -euo pipefail
+
+###############################################################################
+# helper: create empty file (and all parent dirs)
+###############################################################################
+touch_file() {
+  mkdir -p "$(dirname "$1")"
+  touch "$1"
+}
+
+###############################################################################
+# Complete list of files (files only – directories are implied)
+###############################################################################
+files=(
+  client/mobile-native/src/auth/.gitkeep
+  client/mobile-native/src/profile/.gitkeep
+  client/mobile-native/src/discovery/.gitkeep
+  client/mobile-native/src/chat/.gitkeep
+  client/mobile-native/src/components/.gitkeep
+  client/mobile-native/src/App.js
+  client/mobile-native/package.json
+  client/mobile-native/metro.config.js
+
+  client/mobile-web/public/.gitkeep
+  client/mobile-web/src/pages/.gitkeep
+  client/mobile-web/src/hooks/.gitkeep
+  client/mobile-web/src/services/api.js
+  client/mobile-web/src/i18n/.gitkeep
+  client/mobile-web/src/App.jsx
+  client/mobile-web/vite.config.js
+  client/mobile-web/manifest.json
+
+  client/desktop-web/src/routes/.gitkeep
+  client/desktop-web/src/views/.gitkeep
+  client/desktop-web/src/store/.gitkeep
+  client/desktop-web/src/main.jsx
+  client/desktop-web/index.html
+
+  gateway/server.js
+  gateway/routes/auth.js
+  gateway/routes/user.js
+  gateway/routes/match.js
+  gateway/routes/chat.js
+  gateway/middleware/auth.js
+  gateway/middleware/rateLimit.js
+  gateway/middleware/logger.js
+  gateway/services/authServiceClient.js
+  gateway/services/matchServiceClient.js
+  gateway/services/chatServiceClient.js
+  gateway/graphql/schema.graphql
+  gateway/docker-compose.yml
+
+  services/auth-service/src/controllers/auth.js
+  services/auth-service/src/models/User.js
+  services/auth-service/src/routes/.gitkeep
+  services/auth-service/src/utils/jwt.js
+  services/auth-service/package.json
+  services/auth-service/Dockerfile
+
+  services/profile-service/src/controllers/profile.js
+  services/profile-service/src/models/Profile.js
+  services/profile-service/src/middleware/i18n.js
+  services/profile-service/Dockerfile
+
+  services/discovery-service/src/controllers/discovery.js
+  services/discovery-service/src/utils/geolocation.js
+  services/discovery-service/src/redisClient.js
+  services/discovery-service/Dockerfile
+
+  services/match-service/src/controllers/match.js
+  services/match-service/src/models/Match.js
+  services/match-service/src/events/kafkaProducer.js
+  services/match-service/Dockerfile
+
+  services/chat-service/src/server.js
+  services/chat-service/src/controllers/chat.js
+  services/chat-service/src/db/mongo.js
+  services/chat-service/Dockerfile
+
+  services/media-service/src/controllers/media.js
+  services/media-service/src/utils/s3Uploader.js
+  services/media-service/src/workers/moderationWorker.js
+  services/media-service/Dockerfile
+
+  services/notification-service/src/services/fcm.js
+  services/notification-service/src/services/email.js
+  services/notification-service/src/routes/webhook.js
+  services/notification-service/Dockerfile
+
+  services/analytics-service/src/routes/events.js
+  services/analytics-service/src/kafkaConsumer.js
+  services/analytics-service/src/db/bigquery.js
+  services/analytics-service/Dockerfile
+
+  services/billing-service/src/controllers/checkout.js
+  services/billing-service/src/utils/stripeWebhook.js
+  services/billing-service/src/models/Subscription.js
+  services/billing-service/Dockerfile
+
+  ai-engine/recommendation-engine/app.py
+  ai-engine/recommendation-engine/models/collaborative.py
+  ai-engine/recommendation-engine/models/content.py
+  ai-engine/recommendation-engine/Dockerfile
+
+  ai-engine/nlp-analyzer/app.py
+  ai-engine/nlp-analyzer/models/toxicity.py
+  ai-engine/nlp-analyzer/utils/icebreaker_suggestions.py
+
+  ai-engine/image-moderation/app.py
+  ai-engine/image-moderation/models/facenet.py
+  ai-engine/image-moderation/models/nsfw.py
+  ai-engine/image-moderation/utils/best_photo_suggest.py
+
+  ai-engine/behavioral-predictor/app.py
+  ai-engine/behavioral-predictor/models/churn_model.pkl
+  ai-engine/behavioral-predictor/predict.py
+
+  data/docker-compose-db.yml
+  data/mongodb/init.js
+  data/redis/config/redis.conf
+  data/elasticsearch/mappings/users.json
+
+  infra/k8s/deployments/auth-deployment.yaml
+  infra/k8s/deployments/match-deployment.yaml
+  infra/k8s/deployments/gateway-deployment.yaml
+  infra/k8s/services/nodeport-service.yaml
+  infra/k8s/ingress/kong-ingress.yaml
+
+  infra/terraform/main.tf
+  infra/terraform/eks-cluster.tf
+  infra/terraform/s3-bucket.tf
+
+  infra/cicd/github-actions/deploy-services.yml
+  infra/cicd/github-actions/test.yml
+  infra/cicd/docker-build.sh
+
+  infra/monitoring/prometheus.yml
+  infra/monitoring/grafana-dashboard.json
+  infra/monitoring/sentry.config.js
+
+  admin-dashboard/src/pages/Users.js
+  admin-dashboard/src/pages/Reports.js
+  admin-dashboard/src/pages/Analytics.js
+  admin-dashboard/src/services/apiClient.js
+  admin-dashboard/package.json
+  admin-dashboard/Dockerfile
+
+  shared/config/.gitkeep
+  shared/utils/logger.js
+  shared/kafka/kafkaClient.js
+  shared/types/user.interface.ts
+
+  .gitignore
+  README.md
+  docker-compose.yml
+)
+
+###############################################################################
+# Create all files
+###############################################################################
+for f in "${files[@]}"; do
+  touch_file "$f"
+done
+
+echo "✅ Etincel project scaffold created successfully."
+
+///
