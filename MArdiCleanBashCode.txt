@@ -96,6 +96,8 @@ Monetization Stripe + subscription plan Webhook
 - Gold: $19.99/month (ad-free + boosts)
 $9.99 Premium Tier✅
 $19.99 Gold Tier	
+Geofilters & Boosts Pay to appear in specific locations
+Gifts & Virtual Items Send digital gifts in chat	
 ✅ Stripe Checkout
 ✅ Webhook Handling (Active/Canceled)
 ✅ Freemium Model (100 likes/day free)
