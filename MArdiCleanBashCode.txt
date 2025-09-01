@@ -6,6 +6,8 @@ Monetization profitable ,location based GPS, facial recognition, AI Driving, I18
 ////////////
 
 
+
+
 Generate a similar structure code of the application project 
 
          CLIENT LAYERS                         |
