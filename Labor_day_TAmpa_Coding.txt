@@ -1,0 +1,1538 @@
+
+
+full-stack dating Mobile App that works seamlessly across mobile web, native apps, and desktop ,similar to Tinder.
+Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
+
+///////////////////////////////// gneerate some thinh like this ///////
+
+////////////
+
+
+
+
+Generate a similar structure code of the application project 
+
+         CLIENT LAYERS                         |
++-------------------------------------------------------------+
+|  Mobile App (iOS/Android)   |  Mobile Web   |  Desktop Web  |
+|  (React Native / Flutter)   | (React/PWA)   | (React)   |
++-----------------------------+---------------+---------------+
+               |                     |                |
+               v                     v                v
++-------------------------------------------------------------+
+|                      API GATEWAY / Kong, BFF + GraphQL                     |
+|  (REST/GraphQL) + Kong → Auth, Rate Limiting, Request Routing      |
++-------------------------------------------------------------+
+               | (Secure HTTPS / WebSockets)
+               v
++-------------------------------------------------------------+
+|                      MICROSERVICES BACKEND                  |
+|-------------------------------------------------------------|
+|  • Auth Service     • Match Service     • Chat Service      |
+|  • Profile Service  • AI Engine         • Notification      |
+|  • Media Service    • Discovery Service • Analytics Service |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                       DATA LAYER                            |
+|-------------------------------------------------------------|
+|  MongoDB (User, Match, Chat)                             |
+|  MongoDB (Profiles, Preferences)                            |
+|  Redis (Caching, Session, Real-time)                        |
+|  Elasticsearch (Search, Discovery)                          |
+|  MinIO / AWS S3 (Photos, Video)                             |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                     AI/ML ENGINE SERVICES                   |
+|-------------------------------------------------------------|
+|  • Recommendation Engine (Collaborative + Content-Based)   |
+|  • NLP Chat Analyzer (Icebreakers, Safety, Tone Detection) |
+|  • Image Moderation (NSFW, Profile Quality)                |
+|  • Behavioral Prediction (Swipe Likelihood, Churn Risk)    |
+|  • Smart Matching (AI-driven compatibility scoring)        |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                   CLOUD INFRASTRUCTURE (AWS/GCP)            |
+|  • Kubernetes (Orchestration)                               |
+|  • Docker (Containerization)                                |
+|  • Cloud Functions (Serverless for AI tasks)                |
+|  • CDN (Image/video delivery)                               |
+|  • Firebase / FCM (Push Notifications)                      |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                  MONITORING & ANALYTICS                     |
+|  • Prometheus + Grafana (Monitoring)                        |
+|  • ELK Stack (Logging)                                      |
+|  • Mixpanel / Amplitude (User Behavior)                     |
+|  • A/B Testing Platform                                     |
++---------------------------
+
+//////////////////////////////////
+
+Generate all source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Node.js + Express + GraphQL, Kong API Gateway
+API GATEWAY / Kong, BFF + GraphQLAuth .rate limiting, request Routing API GATEWAY / BFF                      
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email) Sms phone verification
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+Geofilters & Boosts Pay to appear in specific locations
+Gifts & Virtual Items Send digital gifts in chat	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+Prometheus + Grafana (Monitoring)                        
+ELK Stack (Logging)                                     
+Mixpanel / Amplitude (User Behavior)                    
+A/B Testing Platform 
+
+//////////////////////////////////////
+
+
+///////////////////////////////////////////////////////// from my Own laptop//or computer ////////
+
+create Stripe id key for each item.Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking   STRIPE_SECRET_KEY=s
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PREMIUM_PRICE_ID=
+STRIPE_GOLD_PRICE_ID=
+STRIPE_WEBHOOK_URL
+
+/////////////////////////////  Monetizati  training with Customer////
+
+Feature,Type,Notes
+**Premium Subscription (Sparkly+) **(Monthly/Yearly), Recurring,"Ad-free, unlimited likes, Super Likes, boost, incognito mode"
+In-App Purchases,      One-time,"Buy extra Super Likes, Top Picks, profile boosts"
+Ads,     Non-intrusive,Banner ads for free users (interstitial on swipe limit)
+Virtual Gifts,   Social Monetization,"Send gifts during chat (e.g., roses, fireworks)"
+Boost Visibility,  Time-limited,Push profile to top of nearby users for 30 mins
+
+
+Source,   Projected Revenue (Year 1)
+Subscriptions  (5% conversion) ,$300K+
+In-App Purchases,    $100K+
+"Ads (CPM $5, 1M   impressions/month)"    ,$60K/year
+Virtual Gifts (social monetization)      ,$50K+
+Total Potential,          ~$500K+/year
+
+
+
+
+/////////////////////////////////////
+
+
+
+
+
+matchly/
+├── clients/
+│   ├── mobile/                          
+│   │   ├── src/
+│   │   │   ├── components/              
+│   │   │   │   ├── Card.tsx
+│   │   │   │   ├── AdBanner.tsx
+│   │   │   │   └── LikeButton.tsx
+│   │   │   ├── screens/
+│   │   │   │   ├── OnboardingScreen.tsx
+│   │   │   │   ├── MatchScreen.tsx      
+│   │   │   │   ├── ChatScreen.tsx
+│   │   │   │   ├── VideoCallScreen.tsx
+│   │   │   │   └── SubscriptionScreen.tsx
+│   │   │   ├── navigation/
+│   │   │   │   ├── AppNavigator.tsx
+│   │   │   │   └── AuthNavigator.tsx
+│   │   │   ├── services/
+│   │   │   │   ├── api.ts             
+│   │   │   │   └── authService.ts
+│   │   │   ├── hooks/
+│   │   │   │   ├── useSwipe.ts
+│   │   │   │   └── useUser.ts
+│   │   │   ├── utils/
+│   │   │   │   └── geoUtils.ts
+│   │   │   └── assets/
+│   │   ├── app.config.js
+│   │   ├── App.tsx
+│   │   ├── babel.config.js
+│   │   ├── tsconfig.json
+│   │   └── package.json
+│   │
+│   ├── web-app/                         
+│   │   ├── public/
+│   │   ├── src/
+│   │   │   ├── pages/
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── MatchPage.tsx
+│   │   │   │   └── AdminLogin.tsx
+│   │   │   ├── components/
+│   │   │   │   ├── SwipeCard.tsx
+│   │   │   │   └── ChatWindow.tsx
+│   │   │   ├── services/api.ts
+│   │   │   ├── hooks/useSocket.ts
+│   │   │   └── App.tsx
+│   │   ├── vite.config.ts
+│   │   └── package.json
+│   │
+│   └── admin-dashboard/                 
+│       ├── src/
+│       │   ├── pages/
+│       │   │   ├── Users.tsx
+│       │   │   ├── Reports.tsx
+│       │   │   ├── Revenue.tsx
+│       │   │   └── Moderation.tsx
+│       │   ├── components/
+│       │   │   └── DataTable.tsx
+│       │   └── App.tsx
+│       └── package.json
+│
+├── gateway/                            
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── auth.route.ts
+│   │   │   ├── user.route.ts
+│   │   │   └── chat.route.ts
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.ts
+│   │   │   └── rateLimit.middleware.ts
+│   │   └── server.ts
+│   ├── Dockerfile
+│   └── package.json
+│
+├── services/
+│   ├── auth-service/
+│   │   ├── src/
+│   │   │   ├── controllers/auth.controller.ts
+│   │   │   ├── services/auth.service.ts
+│   │   │   └── server.ts
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   │
+│   ├── profile-service/
+│   │   ├── src/server.ts
+│   │   └── Dockerfile
+│   │
+│   ├── chat-service/
+│   │   ├── src/
+│   │   │   ├── websocket/socketServer.ts  
+│   │   │   └── server.ts
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   │
+│   └── payment-service/
+│       ├── src/
+│       │   ├── controllers/payment.controller.ts
+│       │   └── stripe.webhook.ts
+│       └── Dockerfile
+│
+├── ai-engine/
+│   ├── facial-recognition/
+│   │   ├── src/api.py
+│   │   ├── notebooks/train_face_model.ipynb
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   └── matching-engine/
+│       ├── src/server.py
+│       └── Dockerfile
+│
+├── prisma/
+│   ├── schema.prisma
+│   └── seed.ts
+│
+├── docs/
+│   ├── openapi.yaml                   
+│   ├── API.md
+│   └── DEPLOYMENT.md                  
+│
+├── scripts/
+│   ├── seed-dev-data.ts               
+│   ├── test-stripe-webhook.ts         
+│   └── setup-ssl.sh
+│
+├── tests/
+│   ├── unit/
+│   │   └── auth.service.test.ts       
+│   ├── integration/
+│   │   └── match.e2e.ts              
+│   └── mocks/
+│       └── mockData.ts
+│
+├── infra/
+│   ├── nginx/
+│   │   ├── default.conf
+│   │   └── Dockerfile
+│   ├── docker-compose.yml             
+│   └── docker-compose.prod.yml        
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml                  
+│
+├── public/
+│   └── swagger-ui/                    
+│
+├── .env.example
+├── .gitignore
+├── README.md
+└── package.json
+
+
+//////////////////////////////////////////////// Le trval de Lundi  pas tres fructuex////// de foi sla machine Balance de choses pas mirwes..///
+
+
+
+
+full-stack dating Mobile App that works across mobile web, native apps, and desktop ,similar to Tinder.
+Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
+
+////////////////////////////////////////////////////////////////
+Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      |
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe webhook subscription checkout,Subscriptions.$9.99– Premium Subscription
+Freemium Model: Free: Basic swiping, limited likes/day
+$19.99/month (Gold/Platinum tier) in In-App Purchases,Ads:
+Non-intrusive banner ads (for free users)
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+ A/B Testing Platform            
+
+
+
+MIcroservice Service,Responsibility,Tech
+
+User Service   ,"Registration, profile, preferences",Node.js + MOngodb
+Auth Service,"   Login, JWT, OAuth, 2FA",Node.js + Redis
+Match Service,   "Swipe logic, matching algorithm",Node.js + Redis (for queue)
+AI Matching Service,ML model for compatibility scores,  "Python (scikit-learn, TensorFlow)"
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+Chat Service,  "Real-time messaging, media",Node.js + Socket.IO + MongoDB
+Location Service,   "GPS tracking, nearby users",Node.js + MongoDB geospatial
+Notification Service,  Push/email/SMS,Node.js + Firebase/OneSignal
+Payment Service,  "Subscriptions, in-app purchases",Node.js + Stripe SDK
+Admin Service,   Admin dashboard API,Node.js 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+
+
+
+
+
+
+///////////////////////////////////
+
+
+
+Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      |
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe webhook subscription checkout,Subscriptions.$9.99– Premium Subscription
+Freemium Model: Free: Basic swiping, limited likes/day
+$19.99/month (Gold/Platinum tier) in In-App Purchases,Ads:
+Non-intrusive banner ads (for free users)
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+  A/B Testing Platform            
+
+
+
+/////
+
+
+All source code as a GitHub repo zip
+    Prisma migration scripts
+    React Native swipe screen with Tinder-like UI
+    JWT authentication flow
+    Stripe webhook + subscription sync
+    AI Matching Engine (Python notebook)
+    Retool connection config
+    CI/CD GitHub Actions
+
+
+
+/////////////////////                              /////////////////////////////      
+
+Generate all source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email) Sms phone verification
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+Prometheus + Grafana (Monitoring)                        
+ELK Stack (Logging)                                     
+Mixpanel / Amplitude (User Behavior)                    
+A/B Testing Platform 
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+///  /////////////////////////
+
+
+/////////////////////////////
+
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+STRIPE_PREMIUM_PRICE_ID=price_premium_123
+STRIPE_GOLD_PRICE_ID=price_gold_456
+STRIPE_WEBHOOK_URL=https://yourdomain.com/api/payment/webhook
+
+
+STRIPE_SECRET_KEY=s
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PREMIUM_PRICE_ID=
+STRIPE_GOLD_PRICE_ID=
+STRIPE_WEBHOOK_URL
+
+
+
+
+
+
+
+# AdMob
+ADMOB_APP_ID=ca-app-pub-3940256099942544~3347511713
+ADMOB_BANNER_ID=ca-app-pub-3940256099942544/6300978111
+
+
+
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+  A/B Testing Platform  
+
+
+
+
+or add this later .. 200 files packages ..
+
+✅ "Generate ZIP package" — I’ll create the full downloadable ZIP
+✅ "Add Firebase Auth fallback" — Add Firebase option
+✅ "Add AWS S3 instead of MinIO" — Cloud storage swap
+✅ "Add payment receipt email (SendGrid)"
+
+
+Stripe Checkout & Webhooks
+✅ Multiple Subscription Tiers ($9.99 Premium, $19.99 Gold)
+✅ Freemium Model Logic
+✅ AdMob Integration (for React Native)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+
+
+
+
+/////////////////
+
+Generate a full GitHub entire source code repo structure template for Ubuntu Nginx Development local and production,source code and Web, mobile-app  server servicecs Src, (React Native) 
+Components,services,hooks,Screens Navigation,Routes, json, services,
+all Dockerfiles, pages, ready for production to copy Expo mobile navigation, 
+Admin (React Admin) ,AI model training script, OPenAPi (Swagger) API docs,Expo mobile swipe UI,
+Add Oauth google/apple Setup Guide, Addd seed script,
+Realtime chat with Socket.IO, backend dockerfile OpenAPI (Swagger) spec Stripe webhook test suite, 
+AI model training notebook,Expo mobile camera + facial upload,Admin dashboard,
+Add all code, deloyment guide, test jest =cypress test,Set up GitHub repo with CI/CD?
+Add unit tests (Jest + React Testing Library) Include WebRTC video calling code?Env templates
+Scripts for seeding DB  Add Stripe + WebRTC full integration? 
+Provide a deployment guide for VPS (Ubuntu + Nginx + SSL)?
+//////////////////////
+
+
+Microservice,    Responsibility,     Tech
+
+Auth Service,"User signup/login, JWT, OAuth, 2FA",Node.js + Passport.js
+
+User Service,"Profile management, preferences",Node.js + PostgreSQL
+
+Match Service,"Swipe logic, match engine",Node.js + Redis (for real-time)
+
+Location Service,"GPS tracking, nearby users",Node.js + Redis Geo / Mapbox
+
+AI Service,"Facial recognition, profile authenticity, swipe predictions",Python + TensorFlow / AWS Rekognition
+
+Recommendation Service,"AI-driven suggestions (collaborative filtering, embeddings)",Python + Scikit-learn / PyTorch
+
+Chat Service,"Messaging, real-time chat",Node.js + Socket.IO + MongoDB
+
+
+Payment Service,"Subscriptions, in-app purchases, Stripe integration",Node.js + Stripe API
+
+Notification Service,Push/SMS/Email alerts,"Node.js + FCM, Twilio, SendGrid"
+
+Admin API Service,"Admin CRUD, analytics, moderation",NestJS + PostgreSQL
+
+Content Service,"Image/video processing, Cloudinary integration",Node.js + Cloudinary SDK
+
+I18n Service,Language translation management,Node.js + i18next backend
+
+/////////////
+
+
+
+
+
+
+
+///////////////  / 
+
+sparkr-app/
+├── apps/
+│   ├── mobile/
+│   │   ├── App.tsx
+│   │   ├── app.json
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── CardSwipe.tsx
+│   │   │   ├── ChatBubble.tsx
+│   │   │   └── PhotoUploader.tsx
+│   │   ├── hooks/
+│   │   │   ├── useAuth.ts
+│   │   │   └── useMatches.ts
+│   │   ├── navigation/
+│   │   │   └── AppNavigator.tsx
+│   │   ├── screens/
+│   │   │   ├── LoginScreen.tsx
+│   │   │   ├── SwipeScreen.tsx
+│   │   │   ├── ChatScreen.tsx
+│   │   │   └── ProfileScreen.tsx
+│   │   ├── services/
+│   │   │   ├── api.ts
+│   │   │   └── auth.ts
+│   │   └── utils/
+│   │       ├── biometrics.ts
+│   │       └── i18n.ts
+│   │
+│   ├── web/
+│   │   ├── public/
+│   │   │   └── index.html
+│   │   ├── src/
+│   │   │   ├── App.tsx
+│   │   │   ├── pages/
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── Pricing.tsx
+│   │   │   │   └── Chat.tsx
+│   │   │   ├── services/
+│   │   │   └── store/
+│   │   └── Dockerfile
+│   │
+│   └── admin/
+│       ├── public/
+│       │   └── index.html
+│       ├── src/
+│       │   ├── App.tsx
+│       │   ├── pages/
+│       │   │   ├── Users.tsx
+│       │   │   ├── Reports.tsx
+│       │   │   ├── Revenue.tsx
+│       │   │   └── Moderation.tsx
+│       │   └── components/
+│       │       └── RetoolEmbed.tsx  ← Embedded Retool Dashboard
+│       └── retool-config.json
+│
+
+
+├── services/
+│   ├── auth-service/
+│   │   ├── src/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   └── jwt.guard.ts
+│   │   └── Dockerfile
+│   │
+│   ├── user-service/
+│   │   ├── src/
+│   │   │   ├── user.controller.ts
+│   │   │   └── user.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── match-service/
+│   │   ├── src/
+│   │   │   ├── match.controller.ts
+│   │   │   └── ai.matching.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── chat-service/
+│   │   ├── src/
+│   │   │   ├── chat.gateway.ts
+│   │   │   └── chat.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── payment-service/
+│   │   ├── src/
+│   │   │   ├── stripe.controller.ts
+│   │   │   └── stripe.webhook.ts
+│   │   └── Dockerfile
+│   │
+│   └── location-service/
+│       └── Dockerfile
+│
+├── ai/
+│   ├── facial-recognition/
+│   │   ├── main.py
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   └── notebooks/
+│       └── train-facial-model.ipynb
+│
+├── packages/
+│   ├── db/
+│   │   ├── prisma/
+│   │   │   ├── schema.prisma
+│   │   │   ├── seed.ts
+│   │   │   └── prisma.service.ts
+│   │   └── index.ts
+│   │
+│   ├── api/
+│   │   └── types.ts
+│   │
+│   ├── config/
+│   │   ├── eslint.config.js
+│   │   └── tsconfig.json
+│   │
+│   └── utils/
+│       ├── crypto.ts
+│       └── i18n.ts
+│
+├── infra/
+│   ├── docker-compose.yml
+│   ├── nginx.conf
+│   └── certs/
+│       └── (self-signed or Let's Encrypt)
+│
+├── docs/
+│   └── openapi.yaml
+│
+├── tests/
+│   ├── unit/
+│   │   └── payment.webhook.spec.ts
+│   └── e2e/
+│       ├── chat.cy.ts
+│       └── cypress.config.ts
+│
+├── cypress/
+│   ├── videos/
+│   │   └── chat.cy.mp4  ← Generated video
+│   ├── screenshots/
+│   └── fixtures/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── public/
+│   └── admin/  ← Built Retool-ready dashboard
+│
+├── turbo.json
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
+
+///////////////////////////////////////
+
+full-stack dating Mobile App that works seamlessly across mobile web, native apps, and desktop ,similar to Tinder.
+Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
+
+///////////////////////////////// gneerate some thinh like this ///////
+
+////////////
+
+
+Generate a similar structure code of the application project 
+
+         CLIENT LAYERS                         |
++-------------------------------------------------------------+
+|  Mobile App (iOS/Android)   |  Mobile Web   |  Desktop Web  |
+|  (React Native / Flutter)   | (React/PWA)   | (React)   |
++-----------------------------+---------------+---------------+
+               |                     |                |
+               v                     v                v
++-------------------------------------------------------------+
+|                      API GATEWAY / Kong, BFF + GraphQL                     |
+|  (REST/GraphQL) + Kong → Auth, Rate Limiting, Request Routing      |
++-------------------------------------------------------------+
+               | (Secure HTTPS / WebSockets)
+               v
++-------------------------------------------------------------+
+|                      MICROSERVICES BACKEND                  |
+|-------------------------------------------------------------|
+|  • Auth Service     • Match Service     • Chat Service      |
+|  • Profile Service  • AI Engine         • Notification      |
+|  • Media Service    • Discovery Service • Analytics Service |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                       DATA LAYER                            |
+|-------------------------------------------------------------|
+|  MongoDB (User, Match, Chat)                             |
+|  MongoDB (Profiles, Preferences)                            |
+|  Redis (Caching, Session, Real-time)                        |
+|  Elasticsearch (Search, Discovery)                          |
+|  MinIO / AWS S3 (Photos, Video)                             |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                     AI/ML ENGINE SERVICES                   |
+|-------------------------------------------------------------|
+|  • Recommendation Engine (Collaborative + Content-Based)   |
+|  • NLP Chat Analyzer (Icebreakers, Safety, Tone Detection) |
+|  • Image Moderation (NSFW, Profile Quality)                |
+|  • Behavioral Prediction (Swipe Likelihood, Churn Risk)    |
+|  • Smart Matching (AI-driven compatibility scoring)        |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                   CLOUD INFRASTRUCTURE (AWS/GCP)            |
+|  • Kubernetes (Orchestration)                               |
+|  • Docker (Containerization)                                |
+|  • Cloud Functions (Serverless for AI tasks)                |
+|  • CDN (Image/video delivery)                               |
+|  • Firebase / FCM (Push Notifications)                      |
++-------------------------------------------------------------+
+               |
+               v
++-------------------------------------------------------------+
+|                  MONITORING & ANALYTICS                     |
+|  • Prometheus + Grafana (Monitoring)                        |
+|  • ELK Stack (Logging)                                      |
+|  • Mixpanel / Amplitude (User Behavior)                     |
+|  • A/B Testing Platform                                     |
++---------------------------
+
+//////////////////////////////////
+
+Generate all source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email) Sms phone verification
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+Prometheus + Grafana (Monitoring)                        
+ELK Stack (Logging)                                     
+Mixpanel / Amplitude (User Behavior)                    
+A/B Testing Platform 
+
+//////////////////////////////////////
+
+
+///////////////////////////////////////////////////////// from my Own laptop//or computer ////////
+
+create Stripe id key for each item.Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking   STRIPE_SECRET_KEY=s
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PREMIUM_PRICE_ID=
+STRIPE_GOLD_PRICE_ID=
+STRIPE_WEBHOOK_URL
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+
+
+matchly/
+├── clients/
+│   ├── mobile/                          
+│   │   ├── src/
+│   │   │   ├── components/              
+│   │   │   │   ├── Card.tsx
+│   │   │   │   ├── AdBanner.tsx
+│   │   │   │   └── LikeButton.tsx
+│   │   │   ├── screens/
+│   │   │   │   ├── OnboardingScreen.tsx
+│   │   │   │   ├── MatchScreen.tsx      
+│   │   │   │   ├── ChatScreen.tsx
+│   │   │   │   ├── VideoCallScreen.tsx
+│   │   │   │   └── SubscriptionScreen.tsx
+│   │   │   ├── navigation/
+│   │   │   │   ├── AppNavigator.tsx
+│   │   │   │   └── AuthNavigator.tsx
+│   │   │   ├── services/
+│   │   │   │   ├── api.ts             
+│   │   │   │   └── authService.ts
+│   │   │   ├── hooks/
+│   │   │   │   ├── useSwipe.ts
+│   │   │   │   └── useUser.ts
+│   │   │   ├── utils/
+│   │   │   │   └── geoUtils.ts
+│   │   │   └── assets/
+│   │   ├── app.config.js
+│   │   ├── App.tsx
+│   │   ├── babel.config.js
+│   │   ├── tsconfig.json
+│   │   └── package.json
+│   │
+│   ├── web-app/                         
+│   │   ├── public/
+│   │   ├── src/
+│   │   │   ├── pages/
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── MatchPage.tsx
+│   │   │   │   └── AdminLogin.tsx
+│   │   │   ├── components/
+│   │   │   │   ├── SwipeCard.tsx
+│   │   │   │   └── ChatWindow.tsx
+│   │   │   ├── services/api.ts
+│   │   │   ├── hooks/useSocket.ts
+│   │   │   └── App.tsx
+│   │   ├── vite.config.ts
+│   │   └── package.json
+│   │
+│   └── admin-dashboard/                 
+│       ├── src/
+│       │   ├── pages/
+│       │   │   ├── Users.tsx
+│       │   │   ├── Reports.tsx
+│       │   │   ├── Revenue.tsx
+│       │   │   └── Moderation.tsx
+│       │   ├── components/
+│       │   │   └── DataTable.tsx
+│       │   └── App.tsx
+│       └── package.json
+│
+├── gateway/                            
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── auth.route.ts
+│   │   │   ├── user.route.ts
+│   │   │   └── chat.route.ts
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.ts
+│   │   │   └── rateLimit.middleware.ts
+│   │   └── server.ts
+│   ├── Dockerfile
+│   └── package.json
+│
+├── services/
+│   ├── auth-service/
+│   │   ├── src/
+│   │   │   ├── controllers/auth.controller.ts
+│   │   │   ├── services/auth.service.ts
+│   │   │   └── server.ts
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   │
+│   ├── profile-service/
+│   │   ├── src/server.ts
+│   │   └── Dockerfile
+│   │
+│   ├── chat-service/
+│   │   ├── src/
+│   │   │   ├── websocket/socketServer.ts  
+│   │   │   └── server.ts
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   │
+│   └── payment-service/
+│       ├── src/
+│       │   ├── controllers/payment.controller.ts
+│       │   └── stripe.webhook.ts
+│       └── Dockerfile
+│
+├── ai-engine/
+│   ├── facial-recognition/
+│   │   ├── src/api.py
+│   │   ├── notebooks/train_face_model.ipynb
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   └── matching-engine/
+│       ├── src/server.py
+│       └── Dockerfile
+│
+├── prisma/
+│   ├── schema.prisma
+│   └── seed.ts
+│
+├── docs/
+│   ├── openapi.yaml                   
+│   ├── API.md
+│   └── DEPLOYMENT.md                  
+│
+├── scripts/
+│   ├── seed-dev-data.ts               
+│   ├── test-stripe-webhook.ts         
+│   └── setup-ssl.sh
+│
+├── tests/
+│   ├── unit/
+│   │   └── auth.service.test.ts       
+│   ├── integration/
+│   │   └── match.e2e.ts              
+│   └── mocks/
+│       └── mockData.ts
+│
+├── infra/
+│   ├── nginx/
+│   │   ├── default.conf
+│   │   └── Dockerfile
+│   ├── docker-compose.yml             
+│   └── docker-compose.prod.yml        
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml                  
+│
+├── public/
+│   └── swagger-ui/                    
+│
+├── .env.example
+├── .gitignore
+├── README.md
+└── package.json
+
+
+//////////////////////////////////////////////// Le trval de Lundi  pas tres fructuex////// de foi sla machine Balance de choses pas mirwes..///
+
+
+
+
+full-stack dating Mobile App that works across mobile web, native apps, and desktop ,similar to Tinder.
+Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
+
+////////////////////////////////////////////////////////////////
+Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      |
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe webhook subscription checkout,Subscriptions.$9.99– Premium Subscription
+Freemium Model: Free: Basic swiping, limited likes/day
+$19.99/month (Gold/Platinum tier) in In-App Purchases,Ads:
+Non-intrusive banner ads (for free users)
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+ A/B Testing Platform            
+
+
+
+MIcroservice Service,Responsibility,Tech
+
+User Service   ,"Registration, profile, preferences",Node.js + MOngodb
+Auth Service,"   Login, JWT, OAuth, 2FA",Node.js + Redis
+Match Service,   "Swipe logic, matching algorithm",Node.js + Redis (for queue)
+AI Matching Service,ML model for compatibility scores,  "Python (scikit-learn, TensorFlow)"
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+Chat Service,  "Real-time messaging, media",Node.js + Socket.IO + MongoDB
+Location Service,   "GPS tracking, nearby users",Node.js + MongoDB geospatial
+Notification Service,  Push/email/SMS,Node.js + Firebase/OneSignal
+Payment Service,  "Subscriptions, in-app purchases",Node.js + Stripe SDK
+Admin Service,   Admin dashboard API,Node.js 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+
+
+
+
+
+
+///////////////////////////////////
+
+
+
+Generate all  source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      |
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe webhook subscription checkout,Subscriptions.$9.99– Premium Subscription
+Freemium Model: Free: Basic swiping, limited likes/day
+$19.99/month (Gold/Platinum tier) in In-App Purchases,Ads:
+Non-intrusive banner ads (for free users)
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+  A/B Testing Platform            
+
+
+
+/////
+
+
+All source code as a GitHub repo zip
+    Prisma migration scripts
+    React Native swipe screen with Tinder-like UI
+    JWT authentication flow
+    Stripe webhook + subscription sync
+    AI Matching Engine (Python notebook)
+    Retool connection config
+    CI/CD GitHub Actions
+
+
+
+/////////////////////                              /////////////////////////////      
+
+Generate all source code database Schemata endpoint. all controller, screens, services, Docerfiles
+Frontend (Mobile App)(PWA/React Native) React Native (later), Expo, React Navigation TypeScript,
+Frontend (Web App-) React.js + TypeScript, Redux, Tailwind CSS, React Router/ react navigation
+frontend Desktop Web / React
+Api Gateway/ Bff  Auth .rate limiting, request Routing API GATEWAY / BFF                      
+(REST/GraphQL) → Auth, Rate Limiting, Request Routing   
+(Secure HTTPS / WebSockets)
+Backend microservice,Node.js + Express.js / NestJS (modular),
+Profile creation: photos, bio, preferences,Photo upload with facial recognitio
+Google Maps API + Geolocation (HTML5 + React Native)
+Database,Mongodb (Prisma ORM) + Redis (caching), search nearby match, user 
+I18n Service,   Language translation API,Node.js + Google Translate API
+Redis (Caching, Session, Real-time)                        |
+Elasticsearch (Search, Discovery), MinIO  loacal server(Photos, Video)
+Realtime Socket.IO for chat & notifications  
+Authentication: OAuth 2.0, JWT, biometrics (Face ID, fingerprint) User signup/login (social + email) Sms phone verification
+End-to-end encryption for messages (optional, Two-factor authentication (2FA)
+Monetization Stripe + subscription plan Webhook
+- Freemium: 100 likes/day free
+- Premium: $9.99/month (Stripe or Apple IAP)
+- Gold: $19.99/month (ad-free + boosts)
+$9.99 Premium Tier✅
+$19.99 Gold Tier	
+✅ Stripe Checkout
+✅ Webhook Handling (Active/Canceled)
+✅ Freemium Model (100 likes/day free)
+✅ AdMob Banner Ads (non-Gold users)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+Prometheus + Grafana (Monitoring)                        
+ELK Stack (Logging)                                     
+Mixpanel / Amplitude (User Behavior)                    
+A/B Testing Platform 
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+///  /////////////////////////
+
+
+/////////////////////////////
+
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+STRIPE_PREMIUM_PRICE_ID=price_premium_123
+STRIPE_GOLD_PRICE_ID=price_gold_456
+STRIPE_WEBHOOK_URL=https://yourdomain.com/api/payment/webhook
+
+
+STRIPE_SECRET_KEY=s
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PREMIUM_PRICE_ID=
+STRIPE_GOLD_PRICE_ID=
+STRIPE_WEBHOOK_URL
+
+
+
+
+
+
+
+# AdMob
+ADMOB_APP_ID=ca-app-pub-3940256099942544~3347511713
+ADMOB_BANNER_ID=ca-app-pub-3940256099942544/6300978111
+
+
+
+Facial Recognition Service,   "Photo verification, attractiveness score  ",Python + OpenCV + FaceNet
+AI Matching Engine Python (FastAPI) + TensorFlow/PyTorch
+Realtime chat with Nodejs + Socket.IO,Real-Time Chat & Notifications Match WebSocket (Socket.IO )
+Analytics Service,   "User behavior, retention",Python + BigQuery / Snowflake
+AI Compatibility Engine
+Video Calling (WebRTC)
+OpenAPI (Swagger) 
+fully  Admin Dashboard Built with React + Tailwind + Retool ( user , report, moderation,Monetization tracking 
+subscriptions, ad revenue (Stripe webhooks) all source code boilerplate)
+Report moderation (photos, messages) Analytics: DAU, MAU, match rate, churn Revenue dashboard (LTV, ARPU, conversion) AI model performance
+MONITORING & ANALYTICS                     
+  Prometheus + Grafana (Monitoring)                        
+  ELK Stack (Logging)                                     
+  Mixpanel / Amplitude (User Behavior)                    
+  A/B Testing Platform  
+
+
+
+
+or add this later .. 200 files packages ..
+
+✅ "Generate ZIP package" — I’ll create the full downloadable ZIP
+✅ "Add Firebase Auth fallback" — Add Firebase option
+✅ "Add AWS S3 instead of MinIO" — Cloud storage swap
+✅ "Add payment receipt email (SendGrid)"
+
+
+Stripe Checkout & Webhooks
+✅ Multiple Subscription Tiers ($9.99 Premium, $19.99 Gold)
+✅ Freemium Model Logic
+✅ AdMob Integration (for React Native)
+✅ Environment variables, webhook handlers, frontend buttons, and admin tracking
+
+
+
+
+/////////////////
+
+Generate a full GitHub entire source code repo structure template for Ubuntu Nginx Development local and production,source code and Web, mobile-app  server servicecs Src, (React Native) 
+Components,services,hooks,Screens Navigation,Routes, json, services,
+all Dockerfiles, pages, ready for production to copy Expo mobile navigation, 
+Admin (React Admin) ,AI model training script, OPenAPi (Swagger) API docs,Expo mobile swipe UI,
+Add Oauth google/apple Setup Guide, Addd seed script,
+Realtime chat with Socket.IO, backend dockerfile OpenAPI (Swagger) spec Stripe webhook test suite, 
+AI model training notebook,Expo mobile camera + facial upload,Admin dashboard,
+Add all code, deloyment guide, test jest =cypress test,Set up GitHub repo with CI/CD?
+Add unit tests (Jest + React Testing Library) Include WebRTC video calling code?Env templates
+Scripts for seeding DB  Add Stripe + WebRTC full integration? 
+Provide a deployment guide for VPS (Ubuntu + Nginx + SSL)?
+//////////////////////
+
+
+Microservice,    Responsibility,     Tech
+
+Auth Service,"User signup/login, JWT, OAuth, 2FA",Node.js + Passport.js
+
+User Service,"Profile management, preferences",Node.js + PostgreSQL
+
+Match Service,"Swipe logic, match engine",Node.js + Redis (for real-time)
+
+Location Service,"GPS tracking, nearby users",Node.js + Redis Geo / Mapbox
+
+AI Service,"Facial recognition, profile authenticity, swipe predictions",Python + TensorFlow / AWS Rekognition
+
+Recommendation Service,"AI-driven suggestions (collaborative filtering, embeddings)",Python + Scikit-learn / PyTorch
+
+Chat Service,"Messaging, real-time chat",Node.js + Socket.IO + MongoDB
+
+
+Payment Service,"Subscriptions, in-app purchases, Stripe integration",Node.js + Stripe API
+
+Notification Service,Push/SMS/Email alerts,"Node.js + FCM, Twilio, SendGrid"
+
+Admin API Service,"Admin CRUD, analytics, moderation",NestJS + PostgreSQL
+
+Content Service,"Image/video processing, Cloudinary integration",Node.js + Cloudinary SDK
+
+I18n Service,Language translation management,Node.js + i18next backend
+
+/////////////
+
+
+
+
+
+
+
+///////////////  / 
+
+sparkr-app/
+├── apps/
+│   ├── mobile/
+│   │   ├── App.tsx
+│   │   ├── app.json
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── CardSwipe.tsx
+│   │   │   ├── ChatBubble.tsx
+│   │   │   └── PhotoUploader.tsx
+│   │   ├── hooks/
+│   │   │   ├── useAuth.ts
+│   │   │   └── useMatches.ts
+│   │   ├── navigation/
+│   │   │   └── AppNavigator.tsx
+│   │   ├── screens/
+│   │   │   ├── LoginScreen.tsx
+│   │   │   ├── SwipeScreen.tsx
+│   │   │   ├── ChatScreen.tsx
+│   │   │   └── ProfileScreen.tsx
+│   │   ├── services/
+│   │   │   ├── api.ts
+│   │   │   └── auth.ts
+│   │   └── utils/
+│   │       ├── biometrics.ts
+│   │       └── i18n.ts
+│   │
+│   ├── web/
+│   │   ├── public/
+│   │   │   └── index.html
+│   │   ├── src/
+│   │   │   ├── App.tsx
+│   │   │   ├── pages/
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── Pricing.tsx
+│   │   │   │   └── Chat.tsx
+│   │   │   ├── services/
+│   │   │   └── store/
+│   │   └── Dockerfile
+│   │
+│   └── admin/
+│       ├── public/
+│       │   └── index.html
+│       ├── src/
+│       │   ├── App.tsx
+│       │   ├── pages/
+│       │   │   ├── Users.tsx
+│       │   │   ├── Reports.tsx
+│       │   │   ├── Revenue.tsx
+│       │   │   └── Moderation.tsx
+│       │   └── components/
+│       │       └── RetoolEmbed.tsx  ← Embedded Retool Dashboard
+│       └── retool-config.json
+│
+
+
+├── services/
+│   ├── auth-service/
+│   │   ├── src/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   └── jwt.guard.ts
+│   │   └── Dockerfile
+│   │
+│   ├── user-service/
+│   │   ├── src/
+│   │   │   ├── user.controller.ts
+│   │   │   └── user.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── match-service/
+│   │   ├── src/
+│   │   │   ├── match.controller.ts
+│   │   │   └── ai.matching.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── chat-service/
+│   │   ├── src/
+│   │   │   ├── chat.gateway.ts
+│   │   │   └── chat.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── payment-service/
+│   │   ├── src/
+│   │   │   ├── stripe.controller.ts
+│   │   │   └── stripe.webhook.ts
+│   │   └── Dockerfile
+│   │
+│   └── location-service/
+│       └── Dockerfile
+│
+├── ai/
+│   ├── facial-recognition/
+│   │   ├── main.py
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   └── notebooks/
+│       └── train-facial-model.ipynb
+│
+├── packages/
+│   ├── db/
+│   │   ├── prisma/
+│   │   │   ├── schema.prisma
+│   │   │   ├── seed.ts
+│   │   │   └── prisma.service.ts
+│   │   └── index.ts
+│   │
+│   ├── api/
+│   │   └── types.ts
+│   │
+│   ├── config/
+│   │   ├── eslint.config.js
+│   │   └── tsconfig.json
+│   │
+│   └── utils/
+│       ├── crypto.ts
+│       └── i18n.ts
+│
+├── infra/
+│   ├── docker-compose.yml
+│   ├── nginx.conf
+│   └── certs/
+│       └── (self-signed or Let's Encrypt)
+│
+├── docs/
+│   └── openapi.yaml
+│
+├── tests/
+│   ├── unit/
+│   │   └── payment.webhook.spec.ts
+│   └── e2e/
+│       ├── chat.cy.ts
+│       └── cypress.config.ts
+│
+├── cypress/
+│   ├── videos/
+│   │   └── chat.cy.mp4  ← Generated video
+│   ├── screenshots/
+│   └── fixtures/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── public/
+│   └── admin/  ← Built Retool-ready dashboard
+│
+├── turbo.json
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+////////////////////////////////////////////////////////////
