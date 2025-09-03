@@ -225,6 +225,14 @@ sparkly-dating-app/
 │       ├── requirements.txt
 │       ├── Dockerfile
 │       └── main.py                     
+|
+├── 📁 prisma/
+│   ├── 📁 schema.prisma
+│   
+├──
+│   
+│
+|
 │
 ├── 📁 data/
 │   ├── 📁 schemas/
@@ -315,7 +323,6 @@ sparkly-dating-app/
 ├── docker-compose.yml
 ├── Makefile                            
 └── README.md
-
 
 
 ///////////////////////////////////////////
