@@ -1,7 +1,18 @@
 full-stack dating Mobile App that works seamlessly across mobile web, native apps, and desktop ,similar to Tinder.
 Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
 
-///////////////////////////////// gneerate some thinh like this ///////
+
+
+
+
+//////////////
+
+full-stack dating Mobile App that works seamlessly across mobile web, native apps, and desktop ,similar to Tinder.
+Monetization profitable ,location based GPS, facial recognition, AI Driving, I18n ,Admin page, modular and scalable microservice MVP
+AI-powered, blockchain-verified dating call it Etincel
+
+
+/////////////////// gneerate some thinh like this ///////
 
 ////////////
 
