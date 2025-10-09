@@ -1437,6 +1437,98 @@ ADMIN_PASSWORD="Admin123!@#ChangeInProduction"
 //////////////
 
 
+generated COMPLETE, ERROR-FREE, GITHUB-READY source code for the entire Etinsell platform
+adatpte  All source code to fit and match Domain name etinsell.com fully functional
+Adjust modify all stripe Monetization Stripe + subscription plan Webhook services controller to match domain etinsell.com
+Regenerate all Entire complete Project source code Files with newly upadate package,json makefile, .env, everything ready for development and production ,fully test structure,with all dependencies  Complete File Structure
+
+etinsell/
+├── .env.example
+├── .env.production
+├── .gitignore
+├── package.json
+├── Makefile
+├── README.md
+├── docker-compose.yml
+├── docker-compose.dev.yml
+├── nginx.conf
+│
+├── prisma/
+│   └── schema.prisma
+│
+├── services/
+│   ├── auth-service/
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   ├── Dockerfile
+│   │   ├── .env.example
+│   │   └── src/
+│   │       ├── main.ts
+│   │       ├── controllers/
+│   │       ├── services/
+│   │       ├── routes/
+│   │       ├── middleware/
+│   │       └── dtos/
+│   │
+│   ├── profile-service/
+│   ├── match-service/
+│   ├── chat-service/
+│   ├── payment-service/
+│   ├── notification-service/
+│   ├── media-service/
+│   ├── analytics-service/
+│   ├── blockchain-service/
+│   ├── webrtc-service/
+│   ├── location-service/
+│   └── ai-service/
+│
+├── client/
+│   ├── mobile-native/
+│   ├── mobile-web/
+│   └── desktop-web/
+│
+├── admin-dashboard/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── Dockerfile
+│   ├── public/
+│   └── src/
+│
+├── gateway/
+├── infra/
+├── monitoring/
+└── scripts/
+
+ Complete data model
+ Setup Scripts
+ Database Configuration
+ Local MongoDB connection string
+ Docker MongoDB with authentication
+ All enums defined
+Complete Prisma Schemas
+ Payment Service - User, Subscription, Transaction, Gift
+All Package.json Files
+ Complete Configuration Files
+ All tsconfig.json files
+ All Dockerfile files
+ Deployment guide
+ Troubleshooting section
+ Ready-to-Deploy
+Local Development UBuntu nginx server and Ubuntu Production
+ Docker Compose (dev + prod)
+ Remote server VPS Deployment
+CLOUD INFRASTRUCTURE (AWS/GCP)           
+ • Kubernetes (Orchestration)                             
+ • Docker (Containerization)
+ Nginx configuration
+ Kubernetes ready
+ Health checks
+Backup/restore scripts
+//////////////////////////////
+
+
+
+
 
 
 
