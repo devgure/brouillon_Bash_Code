@@ -19,7 +19,50 @@ For modern DeFi apps, real-time blockchain interactions.
   Wallet Connection
 with  MetaMask  wallet, support the WalletConnect 2.0 protocol. called Sunny 
 
-///////////////
+////////   //////////////
+
+Use this main index and integrate all frontend ,backend database ,for local server and VPS delpoyment
+is the native cryptocurrency for both and is used to pay transaction fees on either blockchain
+Allow User to depoit USD dollar and or Athor Digital Coin
+It uses a Proof-of-Staked-Authority (PoSA) consensus model, which allows for faster transactions and lower fees
+Replace static stats with real-time data from blockchain (using wagmi hooks)
+Integrate Web3Modal for actual wallet connection
+Link feature cards to staking/token creation dApp pages
+Add dark mode toggle
+Include transaction history & portfolio dashboard
+This preview page serves as a landing experience that educates users, builds trust,
+and drives wallet connection — the critical first step in any DeFi onboarding flow.
+
+like the staking dashboard UI and token creation form next?
+
+Audit all contracts before mainnet launch
+✅ Use OpenZeppelin Defender for monitoring
+✅ Add time locks and governance (e.g., via Governor contract)
+✅ Implement slashing protection in staking
+✅ Use Circuit Breakers for emergency pauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////
 
 
 Terra-Luna
