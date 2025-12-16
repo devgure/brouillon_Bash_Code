@@ -3231,10 +3231,92 @@ We'll need to fine-tune the model on healthcare data. We'll do that in Phase 2.
 For MVP, we can use a rule-based approach.
 
 
-##  ////////////////
+
+
+##  ////////////////  Lundi After overland Park .....
+healtcare industri  where is my compteritor ...
+ go deeper  show me how Replaces $1.8B in manual labor in healtcare industry 
+technical architecture diagram?
+A list of credentialing coordinators to cold-message?
+Competitor tear-down (Cactus vs. ProviderTrust vs. MedicsCloud)?
+
 # ///
 
 
+
+
+
+medicai/
+├── apps/
+│   ├── web/ (Next.js 14)
+│   │   ├── app/
+│   │   │   ├── (provider)/          # Provider portal
+│   │   │   │   ├── dashboard/
+│   │   │   │   ├── patients/
+│   │   │   │   ├── appointments/
+│   │   │   │   └── billing/
+│   │   │   ├── (patient)/           # Patient portal
+│   │   │   │   ├── intake/
+│   │   │   │   ├── appointments/
+│   │   │   │   └── billing/
+│   │   │   └── api/                 # Web API routes
+│   │   └── components/
+│   ├── mobile/ (React Native + Expo)
+│   │   ├── src/
+│   │   │   ├── screens/
+│   │   │   │   ├── patient/
+│   │   │   │   ├── provider/
+│   │   │   │   └── auth/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   └── navigation/
+│   │   └── App.tsx
+│   └── api/ (FastAPI)
+│       ├── src/
+│       │   ├── core/                # Config, security, middleware
+│       │   ├── models/              # SQLAlchemy models
+│       │   ├── schemas/             # Pydantic schemas
+│       │   ├── api/                 # Route handlers
+│       │   │   ├── v1/
+│       │   │   │   ├── auth.py
+│       │   │   │   ├── patients.py
+│       │   │   │   ├── intake.py
+│       │   │   │   └── billing.py
+│       │   │   └── websocket.py
+│       │   ├── services/            # Business logic
+│       │   │   ├── ai_orchestrator.py
+│       │   │   ├── billing_service.py
+│       │   │   └── eligibility_service.py
+│       │   └── workers/             # Celery tasks
+│       ├── alembic/                 # Database migrations
+│       └── tests/
+├── ai-services/                      # AI microservices
+│   ├── intake-processor/
+│   │   ├── src/
+│   │   │   ├── models/
+│   │   │   │   ├── llama_finetuned/
+│   │   │   │   └── ner_models/
+│   │   │   └── services/
+│   ├── coding-engine/
+│   └── eligibility-checker/
+├── shared/                          # Shared packages
+│   ├── types/                       # TypeScript types
+│   ├── ui/                          # Shared components
+│   └── utils/                       # Shared utilities
+├── infrastructure/
+│   ├── docker/
+│   │   ├── docker-compose.yml
+│   │   └── Dockerfiles
+│   ├── kubernetes/
+│   │   ├── deployments/
+│   │   └── services/
+│   └── terraform/                   # IaC
+├── docs/
+│   ├── hipaa-compliance.md
+│   └── api-docs/
+└── scripts/
+    ├── data-pipeline/
+    └── deployment/
   
   
   
