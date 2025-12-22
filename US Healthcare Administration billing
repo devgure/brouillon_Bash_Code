@@ -2460,6 +2460,871 @@ buildbrainos/
 
 
 
+//////////////////////////////   MOn nid monday Overland park .   6 pm  /////////////////////
+
+
+
+
+create a high-level TODO plan covering scaffolding, services, clients, infra, CI, and docs. etc..
+
+Plan ready. Before I start generating the full codebase, quick questions to avoid wasted work:
+
+create a high-level TODO plan covering scaffolding, services, clients, infra, CI, and docs. etc..
+
+ a complete scaffold for every folder listed, 
+ and  production-ready MVP implementing the core features (gateway, auth,microservices, project, blueprint ingestion, AI ingest, mobile stub, MinIO, Prisma)?
+
+Production expectations: should images be optimized for production (multi-stage builds, non-root users), include basic secrets handling, and Kubernetes manifests, or keep it focused on Docker Compose + CI?
+No  licensing or proprietary constraints (e.g., private LLMs, 3rd-party API keys)  All Open Source i will got the Api Keys
+
+ implementing the first batch: core backend services + Dockerfiles + post-deploy tests
+ AI/ML,Llama 3 70B (self-hosted via vLLM) + OpenCV + DocTR (document AI)
+AI Models (Open Source):
+Reasoning: Llama 3.1 70B (via Groq/vLLM) – High intelligence, low cost.
+Vision: Qwen-2.5-VL – Best-in-class for reading blueprints/charts.
+Vector DB,Weaviate" (for blueprint embeddings, RFI context)"
+
+
+/////////////////////////////////////////////
+
+
+
+build Create the "Shopify + Stripe + OpenAI" of construction.  
+Build a fulstack  Construction Trades vertical saas AI Agent Ecosystem—a proactive, 
+The AI Co-Pilot for Construction
+The AI Operating System for Construction Execution
+thinking “co-pilot” for project managers, superintendents, and subcontractors—is a massive opportunity. The construction industry is massively undeserved by AI despite drowning in unstructured data (RFIs, drawings, safety logs, emails, punch lists, photos) and bleeding money from delays, rework, and compliance gaps.
+similar and better than Existing tools (Procore, Bluebeam) are great systems of record, but they don't "think" for the user.
+Pain Point: General Contractors (GCs) spend half their day chasing subcontractors, checking insurance, and reading 500-page blueprints.
+Idea: "BuildBrain" – An agent that ingests Blueprints (PDF) + Contracts. It auto-schedules subcontractors,
+flags material delays from emails, and ensures insurance compliance before a worker steps on site.
+
+include extra Microservices Smart Bidding & Submittals Marketplace
+include Bid & Project Marketplace for Vendor ,B2B C2C contractr or Bid construction projects Listing ,posting similar to ConstructConnect.com, procore.com or Sam.gov
+Scrape public boards (Dodge, ConstructConnect) once/day → store in opportunities
+Auto-match against GC pre-qual matrix (location, trade, union, bonding) → push “Bid alert”
+Simple CRUD to let GC post private bid packages; subs can submit via mobile (DocuSign embed)
+
+Target: General Contractors & Large Subcontractors ,Commercial contractor ,sub Subcontractor
+
+show a realistic, high-margin, vertically focused billionaire SaaS business plan—with a path to $300M+ ARR and potential unicorn (or billionaire) trajectory in 3–5 years.
+$1.3T+ TAM 
+RFIs, change orders, safety compliance
+70–80%  
+
+
+BuildBrain: The AI Co-Pilot for Construction
+  The AI Operating System for Construction Execution
+Secret Sauce:
+
+    Construction DNA: Team understands the industry intimately
+    AI as co-pilot: Augments humans, doesn't replace
+    Proactive, not reactive: Flags issues before they become problems
+    Mobile-first: Superintendents use on-site, not just in office
+    Voice interface: "Hey BuildBrain, what's the status of..."
+    
+        "Procore + Bluebeam don’t think. BuildBrain does."
+    TAM: $1.3T+ | Target: General Contractors & Large Subcontractors
+    Path to $300M+ ARR in 5 Years → Unicorn → Billionaire Exit
+    
+    Construction loses 10–15% of project value to:
+
+    RFIs & change orders (avg. 30–50 days delay per RFI)  
+    Subcontractor no-shows (40% of delays traced to subs)  
+    Expired insurance/compliance → $50K+ fines per incident  
+    Blueprint misreads → rework = 5–10% of total cost  
+    Safety violations → OSHA fines + stop-work orders
+    
+        GCs spend 50% of their day on admin, not building.
+
+Existing tools (Procore, Autodesk, Bluebeam) are passive systems of record — they store data but don’t act.
+    
+    BUILD BRAIN: THE AI AGENT ECOSYSTEM
+
+BuildBrain is a proactive, thinking co-pilot that automates the "invisible work" of construction.
+Created business plan overview and schema
+
+build Mobile App that works seamlessly across mobile web, native apps, and desktop,
+Monetization profitable ,location based GPS.AI Driving, I18n ,Admin page, modular and scalable MVP
+use MOngodb schema prisma  ,use Open Source LLm, best cost effective 
+Design the exact MVP scope -day build
+Architect the AI agent orchestration system
+Build the exact MVP scope (day plan)
+
+Generate Technical Architecture Stack Entire Software Full stack
+The Product Architecture (Mobile-First, Offline, desktop web )
+
+Core Capabilities (MVP → Scale)
+Blueprint  Intelligence   Ingests PDFs → extracts components, sequences, dependencies
+Contract & Sub Compliance Engine  Auto-verifies insurance, licenses, scope alignment
+Subcontractor Co-Pilot  Auto-schedules, sends reminders, tracks arrival via GPS
+RFI & Change Order Predictor  Flags risks before they trigger delays
+
+Safety & Compliance Monitor  Analyzes photos, logs, permits → predicts violations
+The "OS" – Execution & Compliance (Goal: $20M ARR)
+Site Copilot." Auto-scheduling, GPS-based time tracking (Geofencing), and Insurance verification (OCR on COI documents)
+ Deep 2-way sync with Procore/Autodesk
+Voice + Mobile-First UX  “Hey BuildBrain, is electrical rough-in done?
+Bid & Project Marketplace  Like ConstructConnect + Procore combined
+The "Wedge" – Smart Bidding & Submittals
+Bid Board" similar to ConstructConnect, but AI-matched. "This Subcontractor is perfect for this job because they have done 5 similar hospitals. BidBrain." Drag & drop a bid package (PDF)
+
+The "Bank" – Fintech & Insurance (Goal: $300M ARR)
+Fintech: "We know the wall is built (verified by photo AI). We will pay the sub today for a 1% fee." (Factoring).
+Insurance: "We know this site is safe. We offer 20% cheaper General Liability insurance
+
+
+Product Architecture: AI Agent Ecosystem
+
+🧩 Three-Layer Stack
+1. The “OS” – Execution & Compliance Engine (Core SaaS, $20–50/user/month → $20M ARR Year 2)
+Blueprint Intelligence Agent
+→ Ingests PDF/DWG → extracts components, dependencies, sequences using multimodal LLM + CV
+Contract & Compliance Agent
+→ Auto-verifies insurance (via Duck Creek, Vertafore APIs), licenses, bonding
+Subcontractor Co-Pilot
+→ GPS geofencing + mobile check-in, automated SMS/WhatsApp reminders
+RFI & Change Order Predictor
+→ Compares drawings, specs, emails → surfaces conflicts before work begins
+Safety Monitor
+→ Analyzes uploaded photos + safety logs → predicts OSHA violations (using fine-tuned vision model)
+2. The “Wedge” – Smart Bidding & Submittals Marketplace (Transactional, $500–$5K/project fee → $50M ARR Year 3)
+BidBrain AI Matcher
+→ Scrapes public boards (Dodge, ConstructConnect, SAM.gov) daily
+→ Matches against GC’s pre-qual matrix: trade, location, union status, bonding capacity
+→ Pushes “Bid Alert” via mobile app
+Private Bid Portal
+→ GCs upload bid packages (PDFs, specs) → drag-and-drop
+→ Subs submit digitally (DocuSign + mobile photo uploads)
+→ AI scores bids: speed, past performance, proximity
+3. The “Bank” – Embedded Fintech & Insurance (High-Margin Revenue, $300M+ ARR Year 5)
+PayBrain (Dynamic Factoring)
+→ AI verifies work completion via photo + GPS + punch list → releases payment in <24h
+→ Charges 1% fee (vs. 3–5% traditional factoring)
+SafeRate Insurance
+→ Partners with carriers (e.g., Travelers, Chubb)
+→ Offers 15–25% discounted GL insurance based on real-time safety score
+→ Revenue: 10–20% commission on premiums
+
+
+Business Model MOnetization Stripe checkout 
+
+Revenue Stream,Pricing,Target Year 3,Target Year 5
+Core SaaS (OS),$40/user/month (min 50 users) → $2K+/GC,$60M ARR,$120M ARR
+Bid Marketplace,"$499–$4,999/project (success fee)",$30M ARR,$80M ARR
+PayBrain (FinTech),1% transaction fee on verified payments,$40M TPV → $0.4M rev,$3B TPV → $30M rev
+SafeRate (Insurance),15% commission on premiums,$10M prem → $1.5M rev,$1B prem → $150M rev
+Enterprise API,"Custom integrations (Procore, Autodesk)",–,$20M ARR
+
+Total ARR Projection:
+Year 1: $8M
+Year 2: $35M
+Year 3: $132M
+Year 4: $210M
+Year 5: $322M+ → Unicorn valuation ($1.2B+)
+
+
+graph LR
+  A[User Uploads: PDF Blueprint + Contract] --> B(Blueprint Intelligence Agent)
+  C[Emails + RFIs] --> D(RFI Predictor Agent)
+  E[Sub GPS Check-in] --> F(Sub Co-Pilot Agent)
+  G[Site Photos] --> H(Safety Monitor Agent)
+  I[Public Bid Boards] --> J(BidBrain Agent)
+
+  B --> K[Knowledge Graph: Components, Sequences]
+  D --> K
+  F --> L[Real-time Schedule Board]
+  H --> M[Safety Risk Score]
+  J --> N[Matched Sub List]
+
+  K --> O[Proactive Alert Engine]
+  L --> O
+  M --> O
+  N --> O
+
+  O --> P[Mobile App: Push + Voice]
+  O --> Q[Desktop Dashboard]
+  O --> R[Procore/Autodesk Sync]
+
+
+Layer,Tech
+Mobile App (Superintendents/Subs): GPS-enabled, Voice-activated ("Hey BuildBrain, log a safety violation for missing hard hats"), Offline-sync.
+Frontend,"React Native (iOS/Android), React (Web), Expo for OTA updates"
+Offline Sync,"WatermelonDB (mobile), RxDB (web) + conflict resolution"
+Backend	Python (FastAPI) + Go (orchestration)	FastAPI for ML services, Go for high-performance orchestration
+Backend: NestJS (Node.js). Modular, strict TypeScript, scalable microservices.
+api-gateway
+auth-service
+user-service
+project-service
+document-service
+compliance-service
+agent-orchestrator
+marketplace-service
+notification-service
+Database,MongoDB local server (flexible schema for unstructured data) + Redis (caching)
+ORM,Prisma" (type-safe, supports MongoDB)"
+AI/ML,Llama 3 70B (self-hosted via vLLM) + OpenCV + DocTR (document AI)
+AI Models (Open Source):
+Reasoning: Llama 3.1 70B (via Groq/vLLM) – High intelligence, low cost.
+Vision: Qwen-2.5-VL – Best-in-class for reading blueprints/charts.
+Vector DB,Weaviate" (for blueprint embeddings, RFI context)"
+Vector DB: Qdrant (Self-hosted/Open Source). For RAG (Retrieval Augmented
+Orchestration,LangGraph (agent state machines) + Temporal.io (workflows)
+AI Microservice: FastAPI (Python). Handles LangGraph, PyTorch, and Scrapers.
+File Processing,Tika + PyMuPDF → extract text/images from PDFs
+Cloud,AWS" (EKS for containers, S3 for files, CloudFront CDN)"
+Auth,Auth0 (B2B SSO) + RBAC per project
+i18n,"LinguiJS (supports Spanish, English, French for NA/LATAM)"
+Geolocation,Mapbox + GPS geofencing (background location via Expo)
+Compliance,OCR: Tesseract + AWS Textract (fallback) → validate COIs
+Real-time	WebSocket, Redis Pub/Sub	Live site updates and notifications
+
+follow this Diagram tree Create Github repo Boilerplate make necessary change for Fulltack MVP microservice
+
+buildbrainos/
+├── 📁 client/                       # Multi-platform UI
+│   ├── 📁 mobile/                   # React Native + Expo (iOS/Android)
+│   │   ├── app.json
+│   │   ├── App.tsx
+│   │   ├── components/
+│   │   ├── screens/
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Projects/
+│   │   │   ├── BlueprintViewer.tsx
+│   │   │   ├── SafetyInspection.tsx
+│   │   │   └── BidMarketplace.tsx
+│   │   ├── lib/
+│   │   │   ├── database/            # WatermelonDB setup
+│   │   │   ├── location/            # Geofencing logic
+│   │   │   └── voice/               # Whisper + Llama-3 intent routing
+│   │   ├── assets/
+│   │   ├── hooks/
+│   │   ├── navigation/
+│   │   ├── services/api.ts          # Axios + offline sync layer
+│   │   └── i18n/                    # LinguiJS (EN/ES/FR)
+│   │
+│   ├── 📁 web-mobile/               # PWA (React + Vite) for tablets & field
+│   │   ├── public/
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── hooks/
+│   │   │   ├── services/api.ts
+│   │   │   ├── i18n/
+│   │   │   └── App.tsx
+│   │   └── vite.config.ts
+│   │
+│   └── 📁 web-desktop/              # Admin Portal (Next.js 14 App Router)
+│       ├── public/
+│       ├── src/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── layout/
+│       │   ├── services/api.ts
+│       │   ├── i18n/
+│       │   └── App.tsx
+│       └── next.config.js
+│
+├── 📁 gateway/                      # Kong API Gateway (Node.js)
+│   ├── server.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── projects.js
+│   │   └── agents.js
+│   ├── middleware/auth.js           # JWT + RBAC
+│   ├── graphql/schema.graphql       # Optional GraphQL layer
+│   ├── docker-compose.yml
+│   └── Dockerfile
+│
+├── 📁 services/                     # NestJS Microservices (TypeScript)
+│   ├── 📁 auth-service/             # Auth0 SSO + RBAC
+│   │   ├── src/
+│   │   │   ├── controllers/
+│   │   │   ├── models/user.entity.ts
+│   │   │   ├── services/auth.service.ts
+│   │   │   └── main.ts
+│   │   ├── package.json
+│   │   ├── Dockerfile
+│   │   └── k8s/deployment.yaml
+│   │
+│   ├── 📁 user-service/             # User & company profiles
+│   │   ├── src/controllers/user.controller.ts
+│   │   ├── src/models/user.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 project-service/          # Core project entity
+│   │   ├── src/controllers/project.controller.ts
+│   │   ├── src/models/project.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 document-service/         # PDF ingestion + metadata extraction
+│   │   ├── src/controllers/document.controller.ts
+│   │   ├── src/services/pdf.extractor.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 compliance-service/       # Insurance/license validation
+│   │   ├── src/controllers/compliance.controller.ts
+│   │   ├── src/services/ocr.validator.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 marketplace-service/      # Bid posting & matching
+│   │   ├── src/controllers/marketplace.controller.ts
+│   │   ├── src/models/bid.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 notification-service/     # SMS, Push, Email
+│   │   ├── src/services/twilio.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 analytics-service/        # Usage tracking, safety scores
+│   │   ├── src/controllers/analytics.controller.ts
+│   │   └── Dockerfile
+│   │
+│   └── 📁 shared-types/             # Shared interfaces across services
+│       ├── src/types/
+│       │   ├── user.interface.ts
+│       │   ├── project.interface.ts
+│       │   └── ai-agent.interface.ts
+│       └── package.json
+│
+├── 📁 ai-agents/                    # Python FastAPI Microservices (Open Source LLMs)
+│   ├── 📁 blueprint-agent/          # Llama-3-8B + Qwen-VL → extract specs, clashes
+│   │   ├── app.py
+│   │   ├── models/blueprint_analyzer.py
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 safety-agent/             # OpenCV + YOLOv8 → detect PPE, fall hazards
+│   │   ├── app.py
+│   │   ├── models/safety_detector.py
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 compliance-ocr-agent/     # Tesseract + AWS Textract → validate COIs
+│   │   ├── app.py
+│   │   ├── models/coi_validator.py
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 bid-scraper-agent/        # Scrape Dodge, ConstructConnect, SAM.gov
+│   │   ├── scraper.py
+│   │   ├── models/bid_matcher.py
+│   │   └── Dockerfile
+│   │
+│   └── 📁 scheduler-agent/          # CPM scheduling + auto-sub assignment
+│       ├── app.py
+│       ├── models/scheduler.py
+│       └── Dockerfile
+│
+├── 📁 orchestration/                # Temporal.io + LangGraph Workflows
+│   ├── workflows/
+│   │   ├── rfi_workflow.py          # RFI prediction → draft → assign → track
+│   │   ├── sub_onboarding.py        # GPS check-in → insurance verify → schedule
+│   │   └── safety_alert.py          # Photo → analyze → alert → log
+│   ├── activities/
+│   │   ├── send_sms.py
+│   │   ├── validate_insurance.py
+│   │   └── extract_blueprint.py
+│   ├── docker-compose.yml
+│   └── Dockerfile
+│
+├── 📁 data/                         # Data Layer
+│   ├── mongodb/                     # Prisma schema + migrations
+│   │   ├── schema.prisma
+│   │   ├── migrations/
+│   │   └── seed.ts
+│   │
+│   ├── qdrant/                      # Vector DB for RAG (blueprints, RFIs)
+│   │   ├── config.yaml
+│   │   └── collections/
+│   │       └── buildbrain.yaml
+│   │
+│   ├── redis.conf                   # Cache & Pub/Sub
+│   └── neo4j/                       # Knowledge Graph (optional for future)
+│       └── constraints.cql
+│
+├── 📁 infra/                        # Infrastructure as Code
+│   ├── k8s/
+│   │   ├── namespace.yaml
+│   │   ├── ingress.yaml
+│   │   ├── postgres-deployment.yaml
+│   │   ├── mongodb-statefulset.yaml
+│   │   ├── redis-deployment.yaml
+│   │   └── kustomization.yaml
+│   │
+│   ├── docker/
+│   │   └── docker-compose.yml       # Local dev stack (all services)
+│   │
+│   └── terraform/                   # AWS provisioning
+│       ├── main.tf
+│       ├── variables.tf
+│       └── eks-cluster.tf
+│
+├── 📁 monitoring/                   # Observability
+│   ├── prometheus.yml
+│   ├── grafana/dashboards/
+│   │   └── buildbrain.json
+│   ├── elasticsearch/
+│   │   └── logstash.conf
+│   └── sentry.config.js
+│
+├── 📁 admin-dashboard/              # Next.js Admin Portal
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Users.tsx
+│   │   │   ├── Reports.tsx
+│   │   │   ├── Analytics.tsx
+│   │   │   └── Settings.tsx
+│   │   ├── services/adminApi.ts
+│   │   └── layout/
+│   └── Dockerfile
+│
+├── 📁 tests/                        # Testing
+│   ├── unit/
+│   │   ├── auth.test.ts
+│   │   └── project.test.ts
+│   ├── integration/
+│   │   └── match.integration.test.ts
+│   └── e2e/
+│       ├── mobile.test.js           # Detox
+│       └── web.test.js              # Cypress
+│
+├── 📁 scripts/
+│   ├── deploy.sh
+│   ├── migrate-db.js
+│   └── seed-ai-models.py
+│
+├── 📄 .gitignore
+├── 📄 README.md
+├── 📄 Makefile                      # Common commands: make dev, make test, make deploy
+└── 📄 docker-compose.yml            # For local dev (gateway + all services)
+
+
+Layer,Technology
+Frontend Mobile,"React Native + Expo (iOS/Android), Offline via WatermelonDB"
+Frontend Web,Next.js 14 (App Router) + Tailwind CSS
+Backend Services,"NestJS (Node.js) — modular, TypeScript, scalable microservices"
+AI Agents,"Python FastAPI — self-hosted Llama-3-8B, Qwen-VL, Tesseract, YOLOv8"
+Orchestration,Temporal.io (long-running workflows) + Redis Pub/Sub (events)
+Database,MongoDB (Prisma ORM) + Qdrant (vector DB) + Redis (cache)
+Auth,Auth0 (B2B SSO) + RBAC per project
+File Storage,MinIO (self-hosted S3) or AWS S3
+Geolocation,Mapbox + Expo Location (background GPS)
+Comms,"Twilio (SMS), SendGrid (email), Firebase Cloud Messaging (push)"
+Cloud,"AWS EKS (Kubernetes), S3, CloudFront, EventBridge"
+Monitoring,Prometheus + Grafana + Sentry
+CI/CD,GitHub Actions + Docker + Kubernetes
+
+
+graph TD
+  A[User Uploads Blueprint] --> B{Temporal Workflow}
+  B --> C[Blueprint Agent]
+  C --> D[Extract Components + Sequences]
+  D --> E[Store in Qdrant Vector DB]
+  E --> F[RFI Predictor Agent]
+  F --> G[Flag Missing Specs]
+  G --> H[Push Alert to Mobile App]
+
+  I[Sub Arrives on Site] --> J{Temporal Workflow}
+  J --> K[GPS Check-In]
+  K --> L[Verify Insurance via OCR]
+  L --> M[Auto-Schedule Next Task]
+  M --> N[Send SMS Reminder]
+
+  O[Email Received] --> P{Temporal Workflow}
+  P --> Q[RFI Predictor Agent]
+  Q --> R[Auto-Draft RFI Response]
+  R --> S[Assign to Superintendent]
+
+  T[Bid Board Scraped] --> U{Temporal Workflow}
+  U --> V[BidBrain Matcher]
+  V --> W[Match Subs by Trade/Location/Bonding]
+  W --> X[Push “Bid Alert” to GC]
+
+  H --> Y[Mobile App: Voice + Push]
+  N --> Y
+  S --> Y
+  X --> Y
+
+
+
+
+////
+
+
+BuildBrainOS — The AI Operating System for Construction Execution
+“Procore stores data. BuildBrain thinks.”
+
+////////
+
+# Database
+DATABASE_URL="mongodb://admin:your-secure-password@mongodb:27017/etincel?authSource=admin"
+REDIS_URL="redis://:your-redis-password@redis:6379"
+
+# Elasticsearch
+ELASTICSEARCH_URL="http://elasticsearch:9200"
+ELASTICSEARCH_USERNAME="elastic"
+ELASTICSEARCH_PASSWORD="your-elastic-password"
+
+# MinIO (Local S3)
+MINIO_ENDPOINT="http://minio:9000"
+MINIO_ACCESS_KEY="minioadmin"
+MINIO_SECRET_KEY="minio-secure-password-2024"
+MINIO_BUCKET="etincel-media"
+MINIO_USE_SSL=false
+
+# Service Ports
+AUTH_SERVICE_PORT=3001
+PROFILE_SERVICE_PORT=3002
+MATCH_SERVICE_PORT=3003
+CHAT_SERVICE_PORT=3004
+PAYMENT_SERVICE_PORT=3005
+AI_SERVICE_PORT=8000
+LOCATION_SERVICE_PORT=9000
+NOTIFICATION_SERVICE_PORT=3006
+MEDIA_SERVICE_PORT=3007
+ANALYTICS_SERVICE_PORT=3008
+WEBRTC_SERVICE_PORT=3009
+
+# JWT
+JWT_SECRET="your-super-secret-jwt-key-change-in-production-make-it-very-long-and-random"
+JWT_EXPIRY="15m"
+REFRESH_TOKEN_EXPIRY="7d"
+JWT_ALGORITHM="HS256"
+
+# Socket.IO
+SOCKET_IO_CORS_ORIGIN="https://.app,https://www.etincel.app,http://localhost:5173,http://localhost:3000"
+SOCKET_IO_PORT=3004
+
+# Stripe Payments
+STRIPE_SECRET_KEY="sk_test_51PnXh2eZvKYlo2C..."
+STRIPE_PUBLISHABLE_KEY="pk_test_51P5Xh2eZvKYlo2C..."
+STRIPE_WEBHOOK_SECRET="whsec_abc123de456ghi789..."
+STRIPE_WEBHOOK_URL="https://api..app/api/v1/payments/webhook"
+
+# Stripe Price IDs
+STRIPE_PREMIUM_PRICE_ID="price_1Pn5Xh2eZvKYlo2CJqY6x4Rl"
+STRIPE_GOLD_PRICE_ID="price_1Pn5Y52eZvKYlo2CR7oKd8kT"
+STRIPE_TRUSTED_BADGE_PRICE_ID="price_1Pn5Zg2eZvKYlo2CmzFjG3Qy"
+
+
+# ETI Token Economy (Polygon)
+ETI_CONTRACT_ADDRESS="0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+ETI_RPC_URL="https://polygon-rpc.com"
+ETI_PRIVATE_KEY="your-wallet-private-key-here"
+ETI_DECIMALS=18
+ETI_SYMBOL="ETI"
+ETI_PLATFORM_FEE_PERCENTAGE=15
+
+# Firebase FCM
+FCM_SERVER_KEY="your-fcm-server-key"
+FCM_PROJECT_ID="-app"
+FIREBASE_CLIENT_EMAIL="firebase-adminsdk@-app.iam.gserviceaccount.com"
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+
+# Email (SendGrid)
+SMTP_HOST="smtp.sendgrid.net"
+SMTP_PORT=587
+SMTP_USER="apikey"
+SMTP_PASS="your-sendgrid-api-key"
+EMAIL_FROM="noreply@etincel.app"
+
+# Twilio SMS
+TWILIO_ACCOUNT_SID="ACxxx"
+TWILIO_AUTH_TOKEN="xxx"
+TWILIO_PHONE_NUMBER="+1234567890"
+
+# AI/ML Services
+OPENAI_API_KEY="sk-xxx"
+HUGGINGFACE_API_KEY="hf_xxx"
+
+# OAuth2
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+FACEBOOK_APP_ID="your-facebook-app-id"
+FACEBOOK_APP_SECRET="your-facebook-app-secret"
+APPLE_CLIENT_ID="your-apple-client-id"
+APPLE_TEAM_ID="your-apple-team-id"
+APPLE_KEY_ID="your-apple-key-id"
+
+# App URLs
+FRONTEND_URL="https:/"
+API_URL="https://api."
+ADMIN_URL="https://admin."
+
+# Feature Flags
+ENABLE_BIOMETRIC_AUTH=true
+ENABLE_VIDEO_CALLS=true
+ENABLE_ETI_TOKENS=true
+
+
+# Node Environment
+NODE_ENV=production
+PORT=3000
+# Local development env
+DATABASE_URL=mongodb://mongo:27017/buildbrain
+AUTH0_DOMAIN=your-auth0-domain.auth0.com
+AUTH0_AUDIENCE=your-api-audience
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_S3_BUCKET=
+AWS_REGION=us-east-1
+AI_SERVICE_URL=http://ai-service:8000
+
+# MINIO_ROOT_USER=minioadmin
+#MINIO_ROOT_PASSWORD=minioadmin
+MINIO_ENDPOINT=http://minio:9000
+#MINIO_BUCKET=buildbrain-blueprints
+
+
+MINIO_ROOT_USER=minioadmin
+MINIO_ROOT_PASSWORD=minioadmin
+MINIO_BUCKET=buildbrain-blueprints
+MONGO_DB=buildbrain
+MONGO_URL=mongodb://mongo:27017
+REDIS_URL=redis://redis:6379
+STRIPE_SECRET_KEY=sk_test_xxx
+STRIPE_WEBHOOK_SECRET=whsec_xxx
+
+
+
+
+
+
+
+
+
+
+
+
+//////////
+
+
+
+buildbrainos/
+├── 📁 client/                       # Multi-platform UI
+│   ├── 📁 mobile/                   # React Native + Expo (iOS/Android)
+│   │   ├── app.json
+│   │   ├── App.tsx
+│   │   ├── components/
+│   │   ├── screens/
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Projects/
+│   │   │   ├── BlueprintViewer.tsx
+│   │   │   ├── SafetyInspection.tsx
+│   │   │   └── BidMarketplace.tsx
+│   │   ├── lib/
+│   │   │   ├── database/            # WatermelonDB setup
+│   │   │   ├── location/            # Geofencing logic
+│   │   │   └── voice/               # Whisper + Llama-3 intent routing
+│   │   ├── assets/
+│   │   ├── hooks/
+│   │   ├── navigation/
+│   │   ├── services/api.ts          # Axios + offline sync layer
+│   │   └── i18n/                    # LinguiJS (EN/ES/FR)
+│   │
+│   ├── 📁 web-mobile/               # PWA (React + Vite) for tablets & field
+│   │   ├── public/
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── hooks/
+│   │   │   ├── services/api.ts
+│   │   │   ├── i18n/
+│   │   │   └── App.tsx
+│   │   └── vite.config.ts
+│   │
+│   └── 📁 web-desktop/              # Admin Portal (Next.js 14 App Router)
+│       ├── public/
+│       ├── src/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── layout/
+│       │   ├── services/api.ts
+│       │   ├── i18n/
+│       │   └── App.tsx
+│       └── next.config.js
+│
+├── 📁 gateway/                      # Kong API Gateway (Node.js)
+│   ├── server.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── projects.js
+│   │   └── agents.js
+│   ├── middleware/auth.js           # JWT + RBAC
+│   ├── graphql/schema.graphql       # Optional GraphQL layer
+│   ├── docker-compose.yml
+│   └── Dockerfile
+│
+├── 📁 services/                     # NestJS Microservices (TypeScript)
+│   ├── 📁 auth-service/             # Auth0 SSO + RBAC
+│   │   ├── src/
+│   │   │   ├── controllers/
+│   │   │   ├── models/user.entity.ts
+│   │   │   ├── services/auth.service.ts
+│   │   │   └── main.ts
+│   │   ├── package.json
+│   │   ├── Dockerfile
+│   │   └── k8s/deployment.yaml
+│   │
+│   ├── 📁 user-service/             # User & company profiles
+│   │   ├── src/controllers/user.controller.ts
+│   │   ├── src/models/user.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 project-service/          # Core project entity
+│   │   ├── src/controllers/project.controller.ts
+│   │   ├── src/models/project.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 document-service/         # PDF ingestion + metadata extraction
+│   │   ├── src/controllers/document.controller.ts
+│   │   ├── src/services/pdf.extractor.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 compliance-service/       # Insurance/license validation
+│   │   ├── src/controllers/compliance.controller.ts
+│   │   ├── src/services/ocr.validator.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 marketplace-service/      # Bid posting & matching
+│   │   ├── src/controllers/marketplace.controller.ts
+│   │   ├── src/models/bid.entity.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 notification-service/     # SMS, Push, Email
+│   │   ├── src/services/twilio.service.ts
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 analytics-service/        # Usage tracking, safety scores
+│   │   ├── src/controllers/analytics.controller.ts
+│   │   └── Dockerfile
+│   │
+│   └── 📁 shared-types/             # Shared interfaces across services
+│       ├── src/types/
+│       │   ├── user.interface.ts
+│       │   ├── project.interface.ts
+│       │   └── ai-agent.interface.ts
+│       └── package.json
+│
+├── 📁 ai-agents/                    # Python FastAPI Microservices (Open Source LLMs)
+│   ├── 📁 blueprint-agent/          # Llama-3-8B + Qwen-VL → extract specs, clashes
+│   │   ├── app.py
+│   │   ├── models/blueprint_analyzer.py
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 safety-agent/             # OpenCV + YOLOv8 → detect PPE, fall hazards
+│   │   ├── app.py
+│   │   ├── models/safety_detector.py
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 compliance-ocr-agent/     # Tesseract + AWS Textract → validate COIs
+│   │   ├── app.py
+│   │   ├── models/coi_validator.py
+│   │   └── Dockerfile
+│   │
+│   ├── 📁 bid-scraper-agent/        # Scrape Dodge, ConstructConnect, SAM.gov
+│   │   ├── scraper.py
+│   │   ├── models/bid_matcher.py
+│   │   └── Dockerfile
+│   │
+│   └── 📁 scheduler-agent/          # CPM scheduling + auto-sub assignment
+│       ├── app.py
+│       ├── models/scheduler.py
+│       └── Dockerfile
+│
+├── 📁 orchestration/                # Temporal.io + LangGraph Workflows
+│   ├── workflows/
+│   │   ├── rfi_workflow.py          # RFI prediction → draft → assign → track
+│   │   ├── sub_onboarding.py        # GPS check-in → insurance verify → schedule
+│   │   └── safety_alert.py          # Photo → analyze → alert → log
+│   ├── activities/
+│   │   ├── send_sms.py
+│   │   ├── validate_insurance.py
+│   │   └── extract_blueprint.py
+│   ├── docker-compose.yml
+│   └── Dockerfile
+│
+├── 📁 data/                         # Data Layer
+│   ├── mongodb/                     # Prisma schema + migrations
+│   │   ├── schema.prisma
+│   │   ├── migrations/
+│   │   └── seed.ts
+│   │
+│   ├── qdrant/                      # Vector DB for RAG (blueprints, RFIs)
+│   │   ├── config.yaml
+│   │   └── collections/
+│   │       └── buildbrain.yaml
+│   │
+│   ├── redis.conf                   # Cache & Pub/Sub
+│   └── neo4j/                       # Knowledge Graph (optional for future)
+│       └── constraints.cql
+│
+├── 📁 infra/                        # Infrastructure as Code
+│   ├── k8s/
+│   │   ├── namespace.yaml
+│   │   ├── ingress.yaml
+│   │   ├── postgres-deployment.yaml
+│   │   ├── mongodb-statefulset.yaml
+│   │   ├── redis-deployment.yaml
+│   │   └── kustomization.yaml
+│   │
+│   ├── docker/
+│   │   └── docker-compose.yml       # Local dev stack (all services)
+│   │
+│   └── terraform/                   # AWS provisioning
+│       ├── main.tf
+│       ├── variables.tf
+│       └── eks-cluster.tf
+│
+├── 📁 monitoring/                   # Observability
+│   ├── prometheus.yml
+│   ├── grafana/dashboards/
+│   │   └── buildbrain.json
+│   ├── elasticsearch/
+│   │   └── logstash.conf
+│   └── sentry.config.js
+│
+├── 📁 admin-dashboard/              # Next.js Admin Portal
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Users.tsx
+│   │   │   ├── Reports.tsx
+│   │   │   ├── Analytics.tsx
+│   │   │   └── Settings.tsx
+│   │   ├── services/adminApi.ts
+│   │   └── layout/
+│   └── Dockerfile
+│
+├── 📁 tests/                        # Testing
+│   ├── unit/
+│   │   ├── auth.test.ts
+│   │   └── project.test.ts
+│   ├── integration/
+│   │   └── match.integration.test.ts
+│   └── e2e/
+│       ├── mobile.test.js           # Detox
+│       └── web.test.js              # Cypress
+│
+├── 📁 scripts/
+│   ├── deploy.sh
+│   ├── migrate-db.js
+│   └── seed-ai-models.py
+│
+├── 📄 .gitignore
+├── 📄 README.md
+├── 📄 Makefile                      # Common commands: make dev, make test, make deploy
+└── 📄 docker-compose.yml            # For local dev (gateway + all services)
+
+
+environment files,,,
+
+
+////////////////////
+
+/////////////////////////////////////// ////////////////////////////
+
+
 
 
 
